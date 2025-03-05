@@ -22,51 +22,41 @@ Hereafter, the project will be referred to simply as "the project."
 
 ## Models Under Review
 Below are the models we have taken into consideration.
-1.	**LLaMA (Large Language Model Meta AI)** (see [^1])
+1.	**LLaMA (Large Language Model Meta AI)**[^1]
   * Created by Meta (Facebook AI).
   * Designed for academic and research use, with variants ranging from millions to billions of parameters.
-2.	**GPT-J** ([^2])
+2.	**GPT-J**[^2]
   * Developed by EleutherAI.
   * Open source and focused on competitive performance compared to GPT-3.
-3.	GPT-NeoX
-(see [Ref. 03])
-o	Another initiative by EleutherAI.
-o	Customizable and scalable model with tens of billions of parameters.
-4.	Falcon
-(see [Ref. 04])
-o	Created by the Institute for Research in Digital Science and Technology (TII).
-o	Open-source model that has gained popularity for high performance on local hardware.
-5.	Bloom
-(see [Ref. 05])
-o	Created by BigScience.
-o	Multilingual and open source, designed to adapt to various scenarios, including private environments.
-6.	Mistral
-(see [Ref. 06])
-o	Specialized for efficiency and optimization on local machines.
-o	Focuses on lightweight yet powerful models.
-7.	Alpaca
-(see [Ref. 07])
-o	Based on LLaMA, trained by Stanford for conversational purposes.
-o	Ideal for targeted tasks on private infrastructures.
-8.	OPT (Open Pretrained Transformer)
-(see [Ref. 08])
-o	Developed by Meta.
-o	Created to reduce dependency on closed models like GPT-3.
-9.	RedPajama
-(see [Ref. 09])
-o	Open source, designed to replicate datasets used by high-level models such as GPT-3.
-o	Focused on accessibility and customization.
-10.	Claude
-(see [Ref. 10])
-o	Created by Anthropic.
-o	Although cloud-oriented, it can be adapted for private environments with specific licenses.
-11.	Gemma
-(see [Ref. 11])
-o	Created by Anthropic.
-o	Although cloud-oriented, it can be adapted for private environments with specific licenses.
+3.	**GPT-NeoX**[^3]
+  * Another initiative by EleutherAI.
+  * Customizable and scalable model with tens of billions of parameters.
+4.	**Falcon**[^4]
+  * Created by the Institute for Research in Digital Science and Technology (TII).
+  * Open-source model that has gained popularity for high performance on local hardware.
+5.	**Bloom**[^5]
+  * Created by BigScience.
+  * Multilingual and open source, designed to adapt to various scenarios, including private environments.
+6.	**Mistral**[^6]
+  * Specialized for efficiency and optimization on local machines.
+  * Focuses on lightweight yet powerful models.
+7.	**Alpaca**[^7]
+  * Based on LLaMA, trained by Stanford for conversational purposes.
+  * Ideal for targeted tasks on private infrastructures.
+8.	**OPT (Open Pretrained Transformer)**[^8]
+  * Developed by Meta.
+  * Created to reduce dependency on closed models like GPT-3.
+9.	**RedPajama**[^9]
+  * Open source, designed to replicate datasets used by high-level models such as GPT-3.
+  * Focused on accessibility and customization.
+10.	**Claude**[^10]
+  * Created by Anthropic.
+  * Although cloud-oriented, it can be adapted for private environments with specific licenses.
+11.	**Gemma**[^11]
+  * Created by Anthropic.
+  * Although cloud-oriented, it can be adapted for private environments with specific licenses.
 
-LLaMA (Large Language Model Meta AI)
-(see [Ref. 01])
+## LLaMA (Large Language Model Meta AI)[^1]
 LLaMA (Large Language Model Meta AI) is a family of language models developed by Meta (formerly known as Facebook). Announced for the first time in 2023, LLaMA was designed to make large-scale models accessible to academic researchers and developers, bridging the gap between large tech platforms and the broader research community. Meta released LLaMA with different variants, differing in size (number of parameters) and computational capabilities.
 The primary goal of LLaMA was to provide powerful yet optimized models in terms of efficiency, enabling users to perform computations and experiments even on local machines, without relying solely on the cloud. This makes it particularly useful for projects that require strict data control, such as those on proprietary machines or in sensitive environments.
 Meta made the LLaMA models available primarily for academic and research purposes, under specific licenses that regulate commercial use. This means that LLaMA is an excellent option for those who want a high-level language model to implement on private machines with a customizable setup.
@@ -820,8 +810,8 @@ LLaMA integrates perfectly into a Retrieval-Augmented Generation pipeline, enhan
 The choice of LLaMA reflects the intention to adopt a reliable, scalable, and secure solution, capable of fully meeting the project's objectives.
 
 ## References
-[^1] Llama - https://www.llama.com/
-[^2] GPT-j - https://www.eleuther.ai/artifacts/gpt-j
+[^1]: Llama - https://www.llama.com/
+[^2]: GPT-j - https://www.eleuther.ai/artifacts/gpt-j
 [^3] GPT-NeoX - https://www.eleuther.ai/artifacts/gpt-neox
 [Ref. 04] Falcon - https://www.tii.ae/news/falcon-3-uaes-technology-innovation-institute-launches-worlds-most-powerful-small-ai-models
 [Ref. 05] Bloom - https://bigscience.huggingface.co/blog/bloom
