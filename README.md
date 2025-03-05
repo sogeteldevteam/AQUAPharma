@@ -1,4 +1,5 @@
 **Date**: _March 5th, 2025_
+
 **Authors**: 
 *	_Rosati (a.rosati@sogetel.it)_
 *	_F. Cerminara (f.cerminara@sogetel.it)_
@@ -8,14 +9,14 @@
 # Most relevant LLMs for optimizing quality assurance documentation management in the pharmaceutical sector
 
 ## Purpose of the Document
-
 The purpose of this document is the evaluation of LLM performance through benchmarks and standard metrics to identify the most suitable model for optimizing quality assurance documentation management in the pharmaceutical sector. The benchmarking of LLMs falls within the scope of a project named AQUA Pharma (Advanced Quality Assurance with AI in Pharmaceuticals).
-Project Overview
+
+## Project Overview
 AQUA Pharma aims to revolutionize the management of quality assurance (QA) documentation in the pharmaceutical sector by developing an integrated prototype for intelligent search, analysis, and response. The prototype will be based on the fine-tuning of existing LLMs to optimize QA documentation management and enhance the efficiency and accuracy of document review and updating processes.
 The project consists of the following key activities:
-•	Analysis of available models: examination of existing LLMs and fine-tuning tools.
-•	Application in pharmaceutical QA: implementation of these tools to support the search and analysis of QA documents.
-•	Scalability analysis: assessment of the potential for extending the developed technology to other sectors.
+*	**Analysis of available models**: examination of existing LLMs and fine-tuning tools.
+* **Application in pharmaceutical QA**: implementation of these tools to support the search and analysis of QA documents.
+* **Scalability analysis**: assessment of the potential for extending the developed technology to other sectors.
 •	Experimental evaluation: testing of the prototype in real-world contexts.
 Hereafter, the project will be referred to simply as "the project."
 Models Under Review
