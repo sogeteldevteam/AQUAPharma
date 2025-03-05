@@ -1,10 +1,10 @@
 **Date**: _March 5th, 2025_
 
 **Authors**: 
-*	_A. Rosati (a.rosati@sogetel.it)_
-*	_F. Cerminara (f.cerminara@sogetel.it)_
-*	_D. Di Fazio (d.difazio@sogetel.it)_ 
-*	_F. Canocchi (f.canocchi@sogetel.it)_
+*	_Fabio Canocchi (f.canocchi@sogetel.it)_
+*	_Federico Cerminara (f.cerminara@sogetel.it)_
+*	_Davide Di Fazio (d.difazio@sogetel.it)_ 
+*	_Andrea Rosati (a.rosati@sogetel.it)_
 
 # Most relevant LLMs for optimizing quality assurance documentation management in the pharmaceutical sector
 
@@ -227,59 +227,61 @@ GPT-NeoX is distributed under the Apache 2.0 license, allowing commercial, acade
 ## Falcon[^4]
 Falcon is an advanced language model developed by the Institute for Quantitative Social Science (IQSS) at Harvard University. It was designed as an open-source model for business, academic, and research applications, with a particular focus on scalability and efficiency. Falcon stands out for its ability to perform advanced NLP tasks with an optimal balance between model size and performance.
 One of the main goals of the Falcon project is to provide an easily deployable solution on proprietary hardware, ensuring data privacy and security. Falcon is particularly known for its optimized architecture, which allows it to use computational resources more efficiently compared to other models in the same class.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+#### Model Size (Number of Parameters)
 Falcon is available in different variants, adaptable according to usage needs:
-•	Falcon-7B: With 7 billion parameters, it is a lightweight but high-performance version.
-•	Falcon-40B: With 40 billion parameters, it offers high-level performance, ideal for complex tasks.
+* Falcon-7B: With 7 billion parameters, it is a lightweight but high-performance version.
+* Falcon-40B: With 40 billion parameters, it offers high-level performance, ideal for complex tasks.
 This modularity allows users to choose the model best suited for their application and computational requirements.
-Hardware Requirements
+
+#### Hardware Requirements
 The hardware requirements for Falcon vary depending on the version:
-•	Falcon-7B: 
-o	Requires about 16 GB of VRAM for inference, making it compatible with high-end consumer GPUs like the NVIDIA RTX 3090.
-o	Can be run on CPUs with at least 64 GB of RAM, although with reduced performance.
-•	Falcon-40B: 
-o	Requires at least 40-80 GB of VRAM, suitable for enterprise-level GPUs like the NVIDIA A100.
-o	For training and fine-tuning, multi-GPU configurations or HPC clusters are recommended.
+* Falcon-7B: 
+  * Requires about 16 GB of VRAM for inference, making it compatible with high-end consumer GPUs like the NVIDIA RTX 3090.
+  * Can be run on CPUs with at least 64 GB of RAM, although with reduced performance.
+*	Falcon-40B: 
+  * Requires at least 40-80 GB of VRAM, suitable for enterprise-level GPUs like the NVIDIA A100.
+  * For training and fine-tuning, multi-GPU configurations or HPC clusters are recommended.
 Falcon is known for optimizing hardware resources, ensuring competitive inference times even on less powerful configurations.
-Supported Frameworks
+
+#### Supported Frameworks
 Falcon is compatible with major machine learning frameworks, simplifying integration into existing pipelines:
-•	PyTorch: The native framework for Falcon, with optimized implementations for training and inference.
-•	Hugging Face Transformers: The model is fully integrated into the library, making it easy to use for both research and business applications.
-•	DeepSpeed and Megatron-LM: For optimizing training and inference on distributed configurations.
+* PyTorch: The native framework for Falcon, with optimized implementations for training and inference.
+* Hugging Face Transformers: The model is fully integrated into the library, making it easy to use for both research and business applications.
+* DeepSpeed and Megatron-LM: For optimizing training and inference on distributed configurations.
+
 This compatibility ensures great flexibility for customization and implementation of Falcon.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 Falcon supports both full training and custom fine-tuning:
-•	Full Training: 
-o	Requires large datasets and advanced infrastructure (HPC clusters or TPUs). It is most commonly used to create high-level, customized models.
-•	Fine-Tuning: 
-o	Techniques such as LoRA, Prompt Tuning, and Adapter Layers allow Falcon to be adapted for specific tasks, reducing computational costs.
-o	Moderate-sized datasets can be used to specialize the model in vertical tasks or adapt it to specific domains.
-Querying Modes (API, CLI, etc.)
+* Full Training: Requires large datasets and advanced infrastructure (HPC clusters or TPUs). It is most commonly used to create high-level, customized models.
+* Fine-Tuning: Techniques such as LoRA, Prompt Tuning, and Adapter Layers allow Falcon to be adapted for specific tasks, reducing computational costs.
+
+Moderate-sized datasets can be used to specialize the model in vertical tasks or adapt it to specific domains.
+
+#### Querying Modes (API, CLI, etc.)
 Falcon offers several querying modes:
-•	Local APIs: 
-o	Allows running Falcon on private servers, receiving requests via REST API for custom inferences.
-•	CLI: 
-o	Ideal for batch processing and quick testing.
-•	Custom UIs: 
-o	Tools like Gradio can be integrated to create interactive interfaces.
+* Local APIs: Allows running Falcon on private servers, receiving requests via REST API for custom inferences.
+* CLI: Ideal for batch processing and quick testing.
+* Custom UIs: Tools like Gradio can be integrated to create interactive interfaces.
+
 Querying pipelines can be configured to work in real-time or for asynchronous processes, adapting to operational needs.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 Falcon excels at document reading and organization due to its ability to understand complex contexts. It is particularly suitable for:
-•	Automatic Summarization: 
-o	Generates clear and coherent summaries of long and technical documents, such as business or scientific reports.
-•	Extraction and Semantic Search: 
-o	Allows identification and organization of key information, such as named entities, dates, and specific concepts.
-•	Classification and Tagging: 
-o	Can categorize documents or assign thematic labels based on their content.
-•	Analysis of Structured and Unstructured Documents: 
-o	Can analyze tables, complex paragraphs, and OCR documents, providing contextual interpretation.
+* Automatic Summarization: Generates clear and coherent summaries of long and technical documents, such as business or scientific reports.
+* Extraction and Semantic Search: Allows identification and organization of key information, such as named entities, dates, and specific concepts.
+* Classification and Tagging: Can categorize documents or assign thematic labels based on their content.
+* Analysis of Structured and Unstructured Documents: Can analyze tables, complex paragraphs, and OCR documents, providing contextual interpretation.
+
 Falcon is optimized for business applications like document indexing and knowledge base management, making it ideal for tasks like document archiving and retrieval.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 Falcon is released under the Apache 2.0 license, allowing full usage rights for both commercial and non-commercial purposes. This makes it accessible to businesses, researchers, and individual developers. The license also permits modification and redistribution of the model, provided that intellectual property regulations and Apache 2.0 terms are followed.
 
-BLOOM
-(see [Ref. 05])
+
+## BLOOM[^5]
 BLOOM (BigScience Large Open-science Open-access Multilingual Language Model) is an open-source language model developed as part of the BigScience project, an international collaboration between researchers and tech companies. Launched in 2022, BLOOM is designed to support over 46 languages and 13 programming languages, making it one of the most versatile and multilingual models available.
 BLOOM was created with the goal of democratizing access to large models, ensuring transparency and accessibility. It is particularly suitable for applications requiring a deep understanding of text and high-quality multilingual generation. The model was trained using computational resources provided by Jean Zay, one of the most powerful supercomputers in Europe, and is optimized to operate on proprietary hardware.
 Technical Details
