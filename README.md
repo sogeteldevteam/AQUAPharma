@@ -1,7 +1,7 @@
 **Date**: _March 5th, 2025_
 
 **Authors**: 
-*	_Rosati (a.rosati@sogetel.it)_
+*	_A. Rosati (a.rosati@sogetel.it)_
 *	_F. Cerminara (f.cerminara@sogetel.it)_
 *	_D. Di Fazio (d.difazio@sogetel.it)_ 
 *	_F. Canocchi (f.canocchi@sogetel.it)_
@@ -63,7 +63,7 @@ The primary goal of LLaMA was to provide powerful yet optimized models in terms 
 Meta made the LLaMA models available primarily for academic and research purposes, under specific licenses that regulate commercial use. This means that LLaMA is an excellent option for those who want a high-level language model to implement on private machines with a customizable setup.
 
 ### Technical Details
-**Model Size (Number of Parameters)**
+#### Model Size (Number of Parameters)
 LLaMA was released in multiple variants, each with an increasing number of parameters, to meet various computational and capability needs:
 *	LLaMA-7B: The lighter version, with 7 billion parameters.
 *	LLaMA-13B: Intermediate model, with 13 billion parameters.
@@ -71,7 +71,7 @@ LLaMA was released in multiple variants, each with an increasing number of param
 *	LLaMA-65B: The most powerful version, with 65 billion parameters.
 Each variant offers a different balance between performance and computational requirements, allowing users to choose the most suitable solution.
 
-## Hardware Requirements
+#### Hardware Requirements
 To run LLaMA on private machines, hardware requirements depend on the chosen model size.
 *	LLaMA-7B: Requires around 16 GB of VRAM (suitable for mid-to-high-end GPU cards).
 *	LLaMA-13B: Needs around 32 GB of VRAM, ideal for high-end GPUs or multi-GPU setups.
@@ -79,14 +79,14 @@ To run LLaMA on private machines, hardware requirements depend on the chosen mod
 *	LLaMA-65B: Requires 128 GB of VRAM, often run in HPC environments or with multiple advanced GPUs.
 For CPU operations, machines with ample RAM (at least 2-4 times the model's parameters) and modern multi-core processors are necessary.
 
-### Supported Frameworks
+#### Supported Frameworks
 LLaMA is compatible with major deep learning frameworks:
 * PyTorch: The primary framework used for training and inference.
 * Hugging Face Transformers: Many developers have integrated LLaMA into the Hugging Face library for easier use.
 * DeepSpeed and Accelerate: To optimize hardware resource usage, especially during training.
 This compatibility makes LLaMA particularly versatile and easy to adapt to various workflows.
 
-### Training and Fine-Tuning Modes
+#### Training and Fine-Tuning Modes
 LLaMA supports the following training modes:
 *	Full Training: Requires large-scale datasets and significant hardware resources.
 *	Fine-tuning on Specific Tasks: Allows customization of the model for specific needs, using smaller datasets and reducing computational costs.
@@ -95,20 +95,20 @@ LLaMA supports the following training modes:
   2. Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
 Tools like Hugging Face Trainer or Fairseq are commonly used to facilitate these operations.
 
-### Querying Modes (API, CLI, etc.)
+#### Querying Modes (API, CLI, etc.)
 *	Local APIs: LLaMA can be run as a local server on private machines, allowing requests via REST API or WebSocket.
 *	CLI (Command Line Interface): For small tests or direct inference operations.
 *	Interactive Frameworks: Interfaces like Gradio or Streamlit can be integrated to develop custom UIs.
 Users can perform batch or real-time inferences, configuring pipelines according to needs.
 
-### Document Management, Organization, and Reading
+#### Document Management, Organization, and Reading
 Thanks to its flexibility and power, LLaMA can be configured for document reading and organization using semantic embedding and text classification techniques. Although it was not specifically designed for advanced structured document parsing, it is capable of:
 *	Extracting key information: It can identify entities, summaries, and main concepts from long text documents.
 *	Organizing content: It can classify documents by topic, relevance, or specific features.
 *	Supporting semantic search: By integrating it with embedding libraries like FAISS, fast and precise text searches can be performed.
 For working with unstructured documents (e.g., PDFs or images containing text), LLaMA can be paired with OCR (Optical Character Recognition) to process content and organize it into specific pipelines. However, for tasks requiring highly contextual document understanding, fine-tuning may be necessary.
 
-### License and Usage Restrictions
+#### License and Usage Restrictions
 LLaMA is distributed under a non-commercial license, with explicit permission for use in research or academic purposes. Commercial use requires specific authorization from Meta. It is essential to adhere to these restrictions, especially when implementing the model in business projects.
 
 
@@ -118,10 +118,11 @@ The name _GPT-J_ comes from the fact that the model was implemented using the JA
 A distinctive feature of GPT-J is its broad compatibility with machine learning platforms and frameworks, thanks to the active community that supported its integration into libraries such as Hugging Face Transformers.
 
 ### Technical Details
-**Model Size (Number of Parameters)**
+#### Model Size (Number of Parameters)
 GPT-J has a single variant with 6 billion parameters, making it a medium-sized model compared to giants like GPT-3 (175B). Despite this, it offers excellent performance in many NLP tasks, including text completion, classification, translation, and creative generation.
 Due to its more manageable size compared to massive models, GPT-J is relatively more accessible in terms of hardware resource requirements.
-**Hardware Requirements**
+
+#### Hardware Requirements
 GPT-J has been optimized to run on machines with decent GPU resources, but it can also run on modern CPUs with sufficient RAM, though with slower inference times.
 *	GPU (preferred): 
 1.	Requires 16-24 GB of VRAM, making it suitable for high-end GPUs such as the NVIDIA RTX 3090, A100, or equivalents.
@@ -130,13 +131,15 @@ GPT-J has been optimized to run on machines with decent GPU resources, but it ca
 1.	At least 64 GB of RAM is needed to load the full model.
 2.	Suitable only for testing or batch operations, not for real-time inference.
 The ability to run GPT-J on consumer hardware makes it a popular choice for individual developers or small businesses.
-**Supported Frameworks**
+
+#### Supported Frameworks
 GPT-J is designed to be used with a variety of machine learning frameworks due to its open-source implementation. The main frameworks include:
 *	JAX: Native framework for GPT-J, optimized for high performance on GPUs and TPUs.
 *	Hugging Face Transformers: The community has adapted GPT-J for use with PyTorch and TensorFlow, facilitating integration into standard workflows.
 *	DeepSpeed and Accelerate: Useful tools to optimize hardware resource usage during training or inference.
 This flexibility ensures the model can be easily integrated into existing pipelines.
-**Training and Fine-Tuning Modes**
+
+#### Training and Fine-Tuning Modes
 GPT-J supports both full training and custom fine-tuning modes, making it ideal for specific adaptations.
 *	Full Training:
 Requires a large dataset and significant hardware resources (high-performance GPUs or TPUs). This is rarely needed, as the pre-trained model already covers a broad range of tasks.
@@ -147,86 +150,81 @@ Allows customization of GPT-J for specific tasks using techniques such as:
 Tools like Hugging Face Trainer make the fine-tuning process relatively simple.
 Querying Modes (API, CLI, etc.)
 GPT-J can be queried through various modes, adapting to different use cases:
-•	Local APIs:
-A local server can be run on private machines to receive requests via REST API. Libraries like FastAPI and Flask are commonly used.
-•	CLI (Command Line Interface):
-Ideal for quick tests or batch processing.
-•	Interactive UIs:
-Tools like Gradio or Streamlit can be integrated to create custom interfaces for user interaction.
-Document Management, Organization, and Reading
+*	Local APIs: A local server can be run on private machines to receive requests via REST API. Libraries like FastAPI and Flask are commonly used.
+*	CLI (Command Line Interface): Ideal for quick tests or batch processing.
+*	Interactive UIs: Tools like Gradio or Streamlit can be integrated to create custom interfaces for user interaction.
+
+#### Document Management, Organization, and Reading
 GPT-J offers advanced capabilities for document management and reading due to its ability to understand contextual language. It is particularly suited for:
-•	Automatic Summarization:
-Generates coherent and precise summaries of long documents, such as reports or articles.
-•	Information Extraction:
-Can identify dates, names, numbers, or other specific details with high accuracy.
-•	Document Classification:
-Can be configured to assign thematic labels or categorize documents based on content.
-•	Semantic Search:
-Paired with embedding techniques, GPT-J supports advanced searching of phrases or concepts in document databases.
+*	Automatic Summarization: Generates coherent and precise summaries of long documents, such as reports or articles.
+*	Information Extraction: Can identify dates, names, numbers, or other specific details with high accuracy.
+*	Document Classification: Can be configured to assign thematic labels or categorize documents based on content.
+*	Semantic Search: Paired with embedding techniques, GPT-J supports advanced searching of phrases or concepts in document databases.
 For structured documents or those containing tabular data, GPT-J can analyze and answer questions about the data itself, making it a versatile choice for managing business content or reporting. As with LLaMA, integration with OCR is necessary for non-textual documents.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 GPT-J is distributed under the Apache 2.0 license, making it fully open-source and suitable for commercial, academic, and research use. There are no specific restrictions on its use, but it is the user's responsibility to ensure that the data used for training or inference complies with privacy regulations and company rules.
 
-GPT-NeoX
-(see [Ref. 03])
+## GPT-NeoX[^3]
 GPT-NeoX is an open-source language model developed by EleutherAI as an evolution of the GPT-Neo family. It is one of the most comprehensive implementations of large-scale models based on the GPT architecture, designed to be scalable and adaptable. GPT-NeoX supports models with billions of parameters and was created with the intention of offering an open-source alternative to proprietary models like GPT-3, while maintaining a high degree of flexibility and customization.
 One of its key features is the ability to operate in distributed environments with multi-GPU configurations, thanks to integration with the DeepSpeed and Megatron-LM frameworks. This makes it particularly useful for businesses and academic institutions looking to deploy LLMs on proprietary infrastructures, optimizing efficiency.
 The model supports natural language processing (NLP) tasks such as text generation, completion, classification, and more, with an emphasis on custom use, thanks to the active community and open-source code.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 GPT-NeoX is designed to support large-scale models, with configurations including:
-•	Models with variable sizes, generally ranging from 6B to 20B parameters.
-•	Capability to scale to larger sizes (over 100B parameters) with appropriate hardware.
+*	Models with variable sizes, generally ranging from 6B to 20B parameters.
+*	Capability to scale to larger sizes (over 100B parameters) with appropriate hardware.
 The flexibility in size allows users to choose the model that fits their computational and application needs.
-Hardware Requirements
+
+#### Hardware Requirements
 The required hardware specifications depend on the model size:
-•	6B Parameters: 
-o	About 20 GB of VRAM for inference, suitable for GPUs like the NVIDIA RTX 3090 or equivalents.
-o	For training, multi-GPU configurations or TPU usage are recommended.
-•	20B Parameters and Beyond: 
-o	Requires 64-80 GB of VRAM, suitable for advanced systems like the NVIDIA A100 or HPC clusters.
-o	Distributed configurations with DeepSpeed or Megatron-LM are highly recommended.
-•	CPU: 
-o	Inferences can be run, but requires 128+ GB of RAM to load large models. Not recommended for real-time tasks.
-Supported Frameworks
+*	6B Parameters: 
+  * About 20 GB of VRAM for inference, suitable for GPUs like the NVIDIA RTX 3090 or equivalents.
+  * For training, multi-GPU configurations or TPU usage are recommended.
+*	20B Parameters and Beyond: 
+  * Requires 64-80 GB of VRAM, suitable for advanced systems like the NVIDIA A100 or HPC clusters.
+  * Distributed configurations with DeepSpeed or Megatron-LM are highly recommended.
+*	CPU: 
+  * Inferences can be run, but requires 128+ GB of RAM to load large models. Not recommended for real-time tasks.
+
+#### Supported Frameworks
 GPT-NeoX is based on PyTorch and uses advanced frameworks for distributed optimization:
-•	DeepSpeed: To optimize memory usage and reduce computational costs during training and inference.
-•	Megatron-LM: To scale training across multi-GPU configurations or HPC clusters.
-•	Hugging Face Transformers: Supported through community integrations for easier and more flexible implementation.
+* DeepSpeed: To optimize memory usage and reduce computational costs during training and inference.
+* Megatron-LM: To scale training across multi-GPU configurations or HPC clusters.
+* Hugging Face Transformers: Supported through community integrations for easier and more flexible implementation.
 This compatibility allows GPT-NeoX to be integrated into many existing pipelines, both for research and business applications.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 GPT-NeoX is highly customizable and supports both full training and fine-tuning:
-•	Full Training: 
-o	Ideal for those who want to create a highly customized model with proprietary datasets.
-o	Requires powerful infrastructure and large datasets.
-•	Fine-Tuning: 
-o	Allows adapting the pre-trained model for specific tasks (e.g., sentiment analysis, topic classification).
-o	Common techniques include LoRA, Prompt Tuning, and Adapter Layers, which reduce computational costs by updating only a portion of the model parameters.
-Querying Modes (API, CLI, etc.)
+* Full Training: 
+  * Ideal for those who want to create a highly customized model with proprietary datasets.
+  * Requires powerful infrastructure and large datasets.
+* Fine-Tuning: 
+  * Allows adapting the pre-trained model for specific tasks (e.g., sentiment analysis, topic classification).
+  * Common techniques include LoRA, Prompt Tuning, and Adapter Layers, which reduce computational costs by updating only a portion of the model parameters.
+
+#### Querying Modes (API, CLI, etc.)
 The available querying modes for GPT-NeoX include:
-•	Local APIs: 
-o	Allows setting up a server to receive generation or analysis requests via REST API.
-•	CLI: 
-o	Enables direct inference from the terminal, useful for quick tests.
-•	Custom UIs: 
-o	Can be integrated with tools like Gradio to create interactive user interfaces.
+* Local APIs: Allows setting up a server to receive generation or analysis requests via REST API.
+*	CLI: Enables direct inference from the terminal, useful for quick tests.
+* Custom UIs: Can be integrated with tools like Gradio to create interactive user interfaces.
 Pipeline configuration for batch or real-time processing is possible with libraries like Hugging Face or DeepSpeed.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 GPT-NeoX is particularly effective in document reading and organization due to its ability to understand context and generate high-quality text. Its applications include:
-•	Automatic Summarization: 
-o	Can generate concise and detailed summaries of complex documents, such as business reports or legal documents.
-•	Information Extraction: 
-o	Identifies and organizes key data (e.g., dates, names, numbers) within long texts.
-•	Classification and Thematic Organization: 
-o	Assigns thematic labels or categories to documents based on their content.
-•	Advanced Document Search: 
-o	Integrated with embedding techniques and semantic search engines, enabling detailed querying over large document archives.
+*	Automatic Summarization: Can generate concise and detailed summaries of complex documents, such as business reports or legal documents.
+*	Information Extraction: Identifies and organizes key data (e.g., dates, names, numbers) within long texts.
+*	Classification and Thematic Organization: Assigns thematic labels or categories to documents based on their content.
+*	Advanced Document Search: Integrated with embedding techniques and semantic search engines, enabling detailed querying over large document archives.
+
 When integrated with OCR tools, GPT-NeoX can also handle unstructured documents, such as PDFs or images of text. Its scalability makes it ideal for large document archives.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 GPT-NeoX is distributed under the Apache 2.0 license, allowing commercial, academic, and research use without specific restrictions. Users are responsible for compliance with local regulations and company policies during use.
 
-Falcon
-(see [Ref. 04])
+## Falcon[^4]
 Falcon is an advanced language model developed by the Institute for Quantitative Social Science (IQSS) at Harvard University. It was designed as an open-source model for business, academic, and research applications, with a particular focus on scalability and efficiency. Falcon stands out for its ability to perform advanced NLP tasks with an optimal balance between model size and performance.
 One of the main goals of the Falcon project is to provide an easily deployable solution on proprietary hardware, ensuring data privacy and security. Falcon is particularly known for its optimized architecture, which allows it to use computational resources more efficiently compared to other models in the same class.
 Technical Details
