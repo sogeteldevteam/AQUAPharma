@@ -819,10 +819,10 @@ LLaMA stands out for its ability to analyze, organize, and synthesize informatio
 LLaMA integrates perfectly into a Retrieval-Augmented Generation pipeline, enhancing the overall effectiveness of the system.
 The choice of LLaMA reflects the intention to adopt a reliable, scalable, and secure solution, capable of fully meeting the project's objectives.
 
-References
-[Ref. 01] Llama - https://www.llama.com/
-[Ref. 02] GPT-j - https://www.eleuther.ai/artifacts/gpt-j
-[Ref. 03] GPT-NeoX - https://www.eleuther.ai/artifacts/gpt-neox
+## References
+[^1] Llama - https://www.llama.com/
+[^2] GPT-j - https://www.eleuther.ai/artifacts/gpt-j
+[^3] GPT-NeoX - https://www.eleuther.ai/artifacts/gpt-neox
 [Ref. 04] Falcon - https://www.tii.ae/news/falcon-3-uaes-technology-innovation-institute-launches-worlds-most-powerful-small-ai-models
 [Ref. 05] Bloom - https://bigscience.huggingface.co/blog/bloom
 [Ref. 06] Mistral - https://mistral.ai/
