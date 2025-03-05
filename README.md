@@ -1,4 +1,4 @@
-**Date**: _March 5th, 2025_
+**Date**: _March 5<sup>th</sup>, 2025_
 
 **Authors**: 
 *	_Fabio Canocchi (f.canocchi@sogetel.it)_
