@@ -56,54 +56,61 @@ Below are the models we have taken into consideration.
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
 
+
 ## LLaMA (Large Language Model Meta AI)[^1]
 LLaMA (Large Language Model Meta AI) is a family of language models developed by Meta (formerly known as Facebook). Announced for the first time in 2023, LLaMA was designed to make large-scale models accessible to academic researchers and developers, bridging the gap between large tech platforms and the broader research community. Meta released LLaMA with different variants, differing in size (number of parameters) and computational capabilities.
 The primary goal of LLaMA was to provide powerful yet optimized models in terms of efficiency, enabling users to perform computations and experiments even on local machines, without relying solely on the cloud. This makes it particularly useful for projects that require strict data control, such as those on proprietary machines or in sensitive environments.
 Meta made the LLaMA models available primarily for academic and research purposes, under specific licenses that regulate commercial use. This means that LLaMA is an excellent option for those who want a high-level language model to implement on private machines with a customizable setup.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+**Model Size (Number of Parameters)**
 LLaMA was released in multiple variants, each with an increasing number of parameters, to meet various computational and capability needs:
-•	LLaMA-7B: The lighter version, with 7 billion parameters.
-•	LLaMA-13B: Intermediate model, with 13 billion parameters.
-•	LLaMA-30B: Advanced version, with 30 billion parameters.
-•	LLaMA-65B: The most powerful version, with 65 billion parameters.
+*	LLaMA-7B: The lighter version, with 7 billion parameters.
+*	LLaMA-13B: Intermediate model, with 13 billion parameters.
+*	LLaMA-30B: Advanced version, with 30 billion parameters.
+*	LLaMA-65B: The most powerful version, with 65 billion parameters.
 Each variant offers a different balance between performance and computational requirements, allowing users to choose the most suitable solution.
 Hardware Requirements
 To run LLaMA on private machines, hardware requirements depend on the chosen model size.
-•	LLaMA-7B: Requires around 16 GB of VRAM (suitable for mid-to-high-end GPU cards).
-•	LLaMA-13B: Needs around 32 GB of VRAM, ideal for high-end GPUs or multi-GPU setups.
-•	LLaMA-30B: Consumes around 64 GB of VRAM, requiring more GPUs (e.g., NVIDIA A100 or equivalent systems).
-•	LLaMA-65B: Requires 128 GB of VRAM, often run in HPC environments or with multiple advanced GPUs.
+*	LLaMA-7B: Requires around 16 GB of VRAM (suitable for mid-to-high-end GPU cards).
+*	LLaMA-13B: Needs around 32 GB of VRAM, ideal for high-end GPUs or multi-GPU setups.
+*	LLaMA-30B: Consumes around 64 GB of VRAM, requiring more GPUs (e.g., NVIDIA A100 or equivalent systems).
+*	LLaMA-65B: Requires 128 GB of VRAM, often run in HPC environments or with multiple advanced GPUs.
 For CPU operations, machines with ample RAM (at least 2-4 times the model's parameters) and modern multi-core processors are necessary.
-Supported Frameworks
+
+### Supported Frameworks
 LLaMA is compatible with major deep learning frameworks:
 •	PyTorch: The primary framework used for training and inference.
 •	Hugging Face Transformers: Many developers have integrated LLaMA into the Hugging Face library for easier use.
 •	DeepSpeed and Accelerate: To optimize hardware resource usage, especially during training.
 This compatibility makes LLaMA particularly versatile and easy to adapt to various workflows.
-Training and Fine-Tuning Modes
+
+### Training and Fine-Tuning Modes
 LLaMA supports the following training modes:
 •	Full Training: Requires large-scale datasets and significant hardware resources.
 •	Fine-tuning on Specific Tasks: Allows customization of the model for specific needs, using smaller datasets and reducing computational costs. Common techniques include: 
 o	LoRA (Low-Rank Adaptation): Reduces memory usage during fine-tuning.
 o	Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
 Tools like Hugging Face Trainer or Fairseq are commonly used to facilitate these operations.
-Querying Modes (API, CLI, etc.)
+
+### Querying Modes (API, CLI, etc.)
 •	Local APIs: LLaMA can be run as a local server on private machines, allowing requests via REST API or WebSocket.
 •	CLI (Command Line Interface): For small tests or direct inference operations.
 •	Interactive Frameworks: Interfaces like Gradio or Streamlit can be integrated to develop custom UIs.
 Users can perform batch or real-time inferences, configuring pipelines according to needs.
-Document Management, Organization, and Reading
+
+### Document Management, Organization, and Reading
 Thanks to its flexibility and power, LLaMA can be configured for document reading and organization using semantic embedding and text classification techniques. Although it was not specifically designed for advanced structured document parsing, it is capable of:
 •	Extracting key information: It can identify entities, summaries, and main concepts from long text documents.
 •	Organizing content: It can classify documents by topic, relevance, or specific features.
 •	Supporting semantic search: By integrating it with embedding libraries like FAISS, fast and precise text searches can be performed.
 For working with unstructured documents (e.g., PDFs or images containing text), LLaMA can be paired with OCR (Optical Character Recognition) to process content and organize it into specific pipelines. However, for tasks requiring highly contextual document understanding, fine-tuning may be necessary.
-License and Usage Restrictions
+
+### License and Usage Restrictions
 LLaMA is distributed under a non-commercial license, with explicit permission for use in research or academic purposes. Commercial use requires specific authorization from Meta. It is essential to adhere to these restrictions, especially when implementing the model in business projects.
 
-GPT-J
-(see [Ref. 02])
+
+## GPT-J[^2]
 GPT-J is a large-scale language model developed by EleutherAI, an organization known for its efforts to provide open-source alternatives to proprietary models like GPT-3. Announced and released in 2021, GPT-J marked an important milestone for the open-source ecosystem, offering 6 billion parameters and competitive performance with similarly sized proprietary models.
 The name "GPT-J" comes from the fact that the model was implemented using the JAX library, a machine learning library known for its speed and efficiency in tensor computations. GPT-J was designed to be used locally, without depending on cloud infrastructure, making it particularly suitable for scenarios where privacy and data control are essential.
 A distinctive feature of GPT-J is its broad compatibility with machine learning platforms and frameworks, thanks to the active community that supported its integration into libraries such as Hugging Face Transformers.
@@ -812,13 +819,13 @@ The choice of LLaMA reflects the intention to adopt a reliable, scalable, and se
 ## References
 [^1]: Llama - https://www.llama.com/
 [^2]: GPT-j - https://www.eleuther.ai/artifacts/gpt-j
-[^3] GPT-NeoX - https://www.eleuther.ai/artifacts/gpt-neox
-[Ref. 04] Falcon - https://www.tii.ae/news/falcon-3-uaes-technology-innovation-institute-launches-worlds-most-powerful-small-ai-models
-[Ref. 05] Bloom - https://bigscience.huggingface.co/blog/bloom
-[Ref. 06] Mistral - https://mistral.ai/
-[Ref. 07] Alpaca - https://crfm.stanford.edu/2023/03/13/alpaca.html
-[Ref. 08] OPT - https://arxiv.org/pdf/2205.01068
-[Ref. 09] RedPajama - https://www.together.ai/blog/redpajama-data-v2
-[Ref. 10] Claude - https://claude.ai/login?returnTo=%2F%3F
-[Ref. 11] Gemma - https://ai.google.dev/gemma/docs
+[^3]: GPT-NeoX - https://www.eleuther.ai/artifacts/gpt-neox
+[^4]: Falcon - https://www.tii.ae/news/falcon-3-uaes-technology-innovation-institute-launches-worlds-most-powerful-small-ai-models
+[^5]: Bloom - https://bigscience.huggingface.co/blog/bloom
+[^6]: Mistral - https://mistral.ai/
+[^7]: Alpaca - https://crfm.stanford.edu/2023/03/13/alpaca.html
+[^8]: OPT - https://arxiv.org/pdf/2205.01068
+[^9]: RedPajama - https://www.together.ai/blog/redpajama-data-v2
+[^10]: Claude - https://claude.ai/login?returnTo=%2F%3F
+[^11]: Gemma - https://ai.google.dev/gemma/docs
 
