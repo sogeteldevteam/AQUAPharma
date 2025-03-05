@@ -70,7 +70,8 @@ LLaMA was released in multiple variants, each with an increasing number of param
 *	LLaMA-30B: Advanced version, with 30 billion parameters.
 *	LLaMA-65B: The most powerful version, with 65 billion parameters.
 Each variant offers a different balance between performance and computational requirements, allowing users to choose the most suitable solution.
-Hardware Requirements
+
+## Hardware Requirements
 To run LLaMA on private machines, hardware requirements depend on the chosen model size.
 *	LLaMA-7B: Requires around 16 GB of VRAM (suitable for mid-to-high-end GPU cards).
 *	LLaMA-13B: Needs around 32 GB of VRAM, ideal for high-end GPUs or multi-GPU setups.
@@ -80,30 +81,31 @@ For CPU operations, machines with ample RAM (at least 2-4 times the model's para
 
 ### Supported Frameworks
 LLaMA is compatible with major deep learning frameworks:
-•	PyTorch: The primary framework used for training and inference.
-•	Hugging Face Transformers: Many developers have integrated LLaMA into the Hugging Face library for easier use.
-•	DeepSpeed and Accelerate: To optimize hardware resource usage, especially during training.
+* PyTorch: The primary framework used for training and inference.
+* Hugging Face Transformers: Many developers have integrated LLaMA into the Hugging Face library for easier use.
+* DeepSpeed and Accelerate: To optimize hardware resource usage, especially during training.
 This compatibility makes LLaMA particularly versatile and easy to adapt to various workflows.
 
 ### Training and Fine-Tuning Modes
 LLaMA supports the following training modes:
-•	Full Training: Requires large-scale datasets and significant hardware resources.
-•	Fine-tuning on Specific Tasks: Allows customization of the model for specific needs, using smaller datasets and reducing computational costs. Common techniques include: 
-o	LoRA (Low-Rank Adaptation): Reduces memory usage during fine-tuning.
-o	Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
+*	Full Training: Requires large-scale datasets and significant hardware resources.
+*	Fine-tuning on Specific Tasks: Allows customization of the model for specific needs, using smaller datasets and reducing computational costs.
+  Common techniques include: 
+  1.	LoRA (Low-Rank Adaptation): Reduces memory usage during fine-tuning.
+  2. Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
 Tools like Hugging Face Trainer or Fairseq are commonly used to facilitate these operations.
 
 ### Querying Modes (API, CLI, etc.)
-•	Local APIs: LLaMA can be run as a local server on private machines, allowing requests via REST API or WebSocket.
-•	CLI (Command Line Interface): For small tests or direct inference operations.
-•	Interactive Frameworks: Interfaces like Gradio or Streamlit can be integrated to develop custom UIs.
+*	Local APIs: LLaMA can be run as a local server on private machines, allowing requests via REST API or WebSocket.
+*	CLI (Command Line Interface): For small tests or direct inference operations.
+*	Interactive Frameworks: Interfaces like Gradio or Streamlit can be integrated to develop custom UIs.
 Users can perform batch or real-time inferences, configuring pipelines according to needs.
 
 ### Document Management, Organization, and Reading
 Thanks to its flexibility and power, LLaMA can be configured for document reading and organization using semantic embedding and text classification techniques. Although it was not specifically designed for advanced structured document parsing, it is capable of:
-•	Extracting key information: It can identify entities, summaries, and main concepts from long text documents.
-•	Organizing content: It can classify documents by topic, relevance, or specific features.
-•	Supporting semantic search: By integrating it with embedding libraries like FAISS, fast and precise text searches can be performed.
+*	Extracting key information: It can identify entities, summaries, and main concepts from long text documents.
+*	Organizing content: It can classify documents by topic, relevance, or specific features.
+*	Supporting semantic search: By integrating it with embedding libraries like FAISS, fast and precise text searches can be performed.
 For working with unstructured documents (e.g., PDFs or images containing text), LLaMA can be paired with OCR (Optical Character Recognition) to process content and organize it into specific pipelines. However, for tasks requiring highly contextual document understanding, fine-tuning may be necessary.
 
 ### License and Usage Restrictions
@@ -112,35 +114,36 @@ LLaMA is distributed under a non-commercial license, with explicit permission fo
 
 ## GPT-J[^2]
 GPT-J is a large-scale language model developed by EleutherAI, an organization known for its efforts to provide open-source alternatives to proprietary models like GPT-3. Announced and released in 2021, GPT-J marked an important milestone for the open-source ecosystem, offering 6 billion parameters and competitive performance with similarly sized proprietary models.
-The name "GPT-J" comes from the fact that the model was implemented using the JAX library, a machine learning library known for its speed and efficiency in tensor computations. GPT-J was designed to be used locally, without depending on cloud infrastructure, making it particularly suitable for scenarios where privacy and data control are essential.
+The name _GPT-J_ comes from the fact that the model was implemented using the JAX library, a machine learning library known for its speed and efficiency in tensor computations. GPT-J was designed to be used locally, without depending on cloud infrastructure, making it particularly suitable for scenarios where privacy and data control are essential.
 A distinctive feature of GPT-J is its broad compatibility with machine learning platforms and frameworks, thanks to the active community that supported its integration into libraries such as Hugging Face Transformers.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+**Model Size (Number of Parameters)**
 GPT-J has a single variant with 6 billion parameters, making it a medium-sized model compared to giants like GPT-3 (175B). Despite this, it offers excellent performance in many NLP tasks, including text completion, classification, translation, and creative generation.
 Due to its more manageable size compared to massive models, GPT-J is relatively more accessible in terms of hardware resource requirements.
-Hardware Requirements
+**Hardware Requirements**
 GPT-J has been optimized to run on machines with decent GPU resources, but it can also run on modern CPUs with sufficient RAM, though with slower inference times.
-•	GPU (preferred): 
+*	GPU (preferred): 
 1.	Requires 16-24 GB of VRAM, making it suitable for high-end GPUs such as the NVIDIA RTX 3090, A100, or equivalents.
 2.	Multi-GPU configurations can be used for heavy workloads or to accelerate fine-tuning.
-•	CPU (alternative option): 
+*	CPU (alternative option): 
 1.	At least 64 GB of RAM is needed to load the full model.
 2.	Suitable only for testing or batch operations, not for real-time inference.
 The ability to run GPT-J on consumer hardware makes it a popular choice for individual developers or small businesses.
-Supported Frameworks
+**Supported Frameworks**
 GPT-J is designed to be used with a variety of machine learning frameworks due to its open-source implementation. The main frameworks include:
-•	JAX: Native framework for GPT-J, optimized for high performance on GPUs and TPUs.
-•	Hugging Face Transformers: The community has adapted GPT-J for use with PyTorch and TensorFlow, facilitating integration into standard workflows.
-•	DeepSpeed and Accelerate: Useful tools to optimize hardware resource usage during training or inference.
+*	JAX: Native framework for GPT-J, optimized for high performance on GPUs and TPUs.
+*	Hugging Face Transformers: The community has adapted GPT-J for use with PyTorch and TensorFlow, facilitating integration into standard workflows.
+*	DeepSpeed and Accelerate: Useful tools to optimize hardware resource usage during training or inference.
 This flexibility ensures the model can be easily integrated into existing pipelines.
-Training and Fine-Tuning Modes
+**Training and Fine-Tuning Modes**
 GPT-J supports both full training and custom fine-tuning modes, making it ideal for specific adaptations.
-•	Full Training:
+*	Full Training:
 Requires a large dataset and significant hardware resources (high-performance GPUs or TPUs). This is rarely needed, as the pre-trained model already covers a broad range of tasks.
-•	Fine-Tuning:
+*	Fine-Tuning:
 Allows customization of GPT-J for specific tasks using techniques such as: 
-o	Adapter Layers: Adds lightweight layers to avoid updating the entire model.
-o	LoRA (Low-Rank Adaptation): Reduces memory usage by updating only a portion of the model parameters.
+1.	Adapter Layers: Adds lightweight layers to avoid updating the entire model.
+2.	LoRA (Low-Rank Adaptation): Reduces memory usage by updating only a portion of the model parameters.
 Tools like Hugging Face Trainer make the fine-tuning process relatively simple.
 Querying Modes (API, CLI, etc.)
 GPT-J can be queried through various modes, adapting to different use cases:
