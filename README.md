@@ -17,18 +17,17 @@ The project consists of the following key activities:
 *	**Analysis of available models**: examination of existing LLMs and fine-tuning tools.
 * **Application in pharmaceutical QA**: implementation of these tools to support the search and analysis of QA documents.
 * **Scalability analysis**: assessment of the potential for extending the developed technology to other sectors.
-•	Experimental evaluation: testing of the prototype in real-world contexts.
+* **Experimental evaluation**: testing of the prototype in real-world contexts.
 Hereafter, the project will be referred to simply as "the project."
-Models Under Review
+
+## Models Under Review
 Below are the models we have taken into consideration.
-1.	LLaMA (Large Language Model Meta AI)
-(see [Ref. 01])
-o	Created by Meta (Facebook AI).
-o	Designed for academic and research use, with variants ranging from millions to billions of parameters.
-2.	GPT-J
-(see [Ref. 02])
-o	Developed by EleutherAI.
-o	Open source and focused on competitive performance compared to GPT-3.
+1.	**LLaMA (Large Language Model Meta AI)** (see [^1])
+  * Created by Meta (Facebook AI).
+  * Designed for academic and research use, with variants ranging from millions to billions of parameters.
+2.	**GPT-J** ([^2])
+  * Developed by EleutherAI.
+  * Open source and focused on competitive performance compared to GPT-3.
 3.	GPT-NeoX
 (see [Ref. 03])
 o	Another initiative by EleutherAI.
