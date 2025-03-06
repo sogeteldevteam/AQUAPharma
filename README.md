@@ -253,11 +253,11 @@ This modularity allows users to choose the model best suited for their applicati
 #### Hardware Requirements
 The hardware requirements for Falcon vary depending on the version:
 * Falcon-7B: 
-  * Requires about 16 GB of VRAM for inference, making it compatible with high-end consumer GPUs like the NVIDIA RTX 3090.
-  * Can be run on CPUs with at least 64 GB of RAM, although with reduced performance.
-*	Falcon-40B: 
-  * Requires at least 40-80 GB of VRAM, suitable for enterprise-level GPUs like the NVIDIA A100.
-  * For training and fine-tuning, multi-GPU configurations or HPC clusters are recommended.
+   * Requires about 16 GB of VRAM for inference, making it compatible with high-end consumer GPUs like the NVIDIA RTX 3090.
+   * Can be run on CPUs with at least 64 GB of RAM, although with reduced performance.
+* Falcon-40B: 
+   * Requires at least 40-80 GB of VRAM, suitable for enterprise-level GPUs like the NVIDIA A100.
+   * For training and fine-tuning, multi-GPU configurations or HPC clusters are recommended.
     
 Falcon is known for optimizing hardware resources, ensuring competitive inference times even on less powerful configurations.
 
@@ -498,7 +498,7 @@ Alpaca is ideal for applications involving archiving, document search, and knowl
 #### License and Usage Restrictions
 Alpaca inherits the GPL-like license from the LLaMA model, with some modifications introduced by Stanford researchers:
 * Freedom of Use: Alpaca can be used for academic and research purposes. However, commercial use requires specific approvals.
-•	Restrictions: 
+* Restrictions: 
    * It is prohibited to use the model for harmful, discriminatory, or unethical purposes.
    * Distributing derivative versions may require publishing the code and modifications.
 
@@ -540,10 +540,10 @@ The broad framework support facilitates implementation in various operating envi
 
 #### Training and Fine-Tuning Modes
 OPT supports flexible methods for training and fine-tuning:
-*	Full Training:
+* Full Training:
    * Requires large-scale datasets and advanced infrastructure.
    * Meta provides detailed guidelines to replicate the original training process.
-*	Fine-Tuning: 
+* Fine-Tuning: 
    * Supports lightweight techniques such as Low-Rank Adaptation (LoRA) and prompt tuning.
    * Fine-tuning can be done for specific tasks such as classification or semantic analysis, using limited resources.
 
