@@ -86,6 +86,7 @@ LLaMA is compatible with major deep learning frameworks:
 * PyTorch: The primary framework used for training and inference.
 * Hugging Face Transformers: Many developers have integrated LLaMA into the Hugging Face library for easier use.
 * DeepSpeed and Accelerate: To optimize hardware resource usage, especially during training.
+  
 This compatibility makes LLaMA particularly versatile and easy to adapt to various workflows.
 
 #### Training and Fine-Tuning Modes
@@ -95,12 +96,14 @@ LLaMA supports the following training modes:
   Common techniques include:
  	* LoRA (Low-Rank Adaptation): Reduces memory usage during fine-tuning.
   * Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
+    
 Tools like Hugging Face Trainer or Fairseq are commonly used to facilitate these operations.
 
 #### Querying Modes (API, CLI, etc.)
 *	Local APIs: LLaMA can be run as a local server on private machines, allowing requests via REST API or WebSocket.
 *	CLI (Command Line Interface): For small tests or direct inference operations.
 *	Interactive Frameworks: Interfaces like Gradio or Streamlit can be integrated to develop custom UIs.
+  
 Users can perform batch or real-time inferences, configuring pipelines according to needs.
 
 #### Document Management, Organization, and Reading
@@ -108,6 +111,7 @@ Thanks to its flexibility and power, LLaMA can be configured for document readin
 *	Extracting key information: It can identify entities, summaries, and main concepts from long text documents.
 *	Organizing content: It can classify documents by topic, relevance, or specific features.
 *	Supporting semantic search: By integrating it with embedding libraries like FAISS, fast and precise text searches can be performed.
+
 For working with unstructured documents (e.g., PDFs or images containing text), LLaMA can be paired with OCR (Optical Character Recognition) to process content and organize it into specific pipelines. However, for tasks requiring highly contextual document understanding, fine-tuning may be necessary.
 
 #### License and Usage Restrictions
@@ -127,26 +131,27 @@ Due to its more manageable size compared to massive models, GPT-J is relatively 
 #### Hardware Requirements
 GPT-J has been optimized to run on machines with decent GPU resources, but it can also run on modern CPUs with sufficient RAM, though with slower inference times.
 *	GPU (preferred): 
-1.	Requires 16-24 GB of VRAM, making it suitable for high-end GPUs such as the NVIDIA RTX 3090, A100, or equivalents.
-2.	Multi-GPU configurations can be used for heavy workloads or to accelerate fine-tuning.
+  1.	Requires 16-24 GB of VRAM, making it suitable for high-end GPUs such as the NVIDIA RTX 3090, A100, or equivalents.
+  2.	Multi-GPU configurations can be used for heavy workloads or to accelerate fine-tuning.
 *	CPU (alternative option): 
-1.	At least 64 GB of RAM is needed to load the full model.
-2.	Suitable only for testing or batch operations, not for real-time inference.
+  1.	At least 64 GB of RAM is needed to load the full model.
+  2.	Suitable only for testing or batch operations, not for real-time inference.
+   
 The ability to run GPT-J on consumer hardware makes it a popular choice for individual developers or small businesses.
 
 #### Supported Frameworks
-GPT-J is designed to be used with a variety of machine learning frameworks due to its open-source implementation. The main frameworks include:
+GPT-J is designed to be used with a variety of machine learning frameworks due to its open-source implementation.
+The main frameworks include:
 *	JAX: Native framework for GPT-J, optimized for high performance on GPUs and TPUs.
 *	Hugging Face Transformers: The community has adapted GPT-J for use with PyTorch and TensorFlow, facilitating integration into standard workflows.
 *	DeepSpeed and Accelerate: Useful tools to optimize hardware resource usage during training or inference.
+
 This flexibility ensures the model can be easily integrated into existing pipelines.
 
 #### Training and Fine-Tuning Modes
 GPT-J supports both full training and custom fine-tuning modes, making it ideal for specific adaptations.
-*	Full Training:
-Requires a large dataset and significant hardware resources (high-performance GPUs or TPUs). This is rarely needed, as the pre-trained model already covers a broad range of tasks.
-*	Fine-Tuning:
-  Allows customization of GPT-J for specific tasks using techniques such as: 
+*	Full Training: Requires a large dataset and significant hardware resources (high-performance GPUs or TPUs). This is rarely needed, as the pre-trained model already covers a broad range of tasks.
+*	Fine-Tuning: Allows customization of GPT-J for specific tasks using techniques such as: 
   *	Adapter Layers: Adds lightweight layers to avoid updating the entire model.
   * LoRA (Low-Rank Adaptation): Reduces memory usage by updating only a portion of the model parameters.
 
@@ -169,6 +174,7 @@ For structured documents or those containing tabular data, GPT-J can analyze and
 
 #### License and Usage Restrictions
 GPT-J is distributed under the Apache 2.0 license, making it fully open-source and suitable for commercial, academic, and research use. There are no specific restrictions on its use, but it is the user's responsibility to ensure that the data used for training or inference complies with privacy regulations and company rules.
+
 
 ## GPT-NeoX[^3]
 GPT-NeoX is an open-source language model developed by EleutherAI as an evolution of the GPT-Neo family. It is one of the most comprehensive implementations of large-scale models based on the GPT architecture, designed to be scalable and adaptable. GPT-NeoX supports models with billions of parameters and was created with the intention of offering an open-source alternative to proprietary models like GPT-3, while maintaining a high degree of flexibility and customization.
@@ -217,6 +223,7 @@ The available querying modes for GPT-NeoX include:
 * Local APIs: Allows setting up a server to receive generation or analysis requests via REST API.
 *	CLI: Enables direct inference from the terminal, useful for quick tests.
 * Custom UIs: Can be integrated with tools like Gradio to create interactive user interfaces.
+  
 Pipeline configuration for batch or real-time processing is possible with libraries like Hugging Face or DeepSpeed.
 
 #### Document Management, Organization, and Reading Capabilities
@@ -240,6 +247,7 @@ One of the main goals of the Falcon project is to provide an easily deployable s
 Falcon is available in different variants, adaptable according to usage needs:
 * Falcon-7B: With 7 billion parameters, it is a lightweight but high-performance version.
 * Falcon-40B: With 40 billion parameters, it offers high-level performance, ideal for complex tasks.
+  
 This modularity allows users to choose the model best suited for their application and computational requirements.
 
 #### Hardware Requirements
@@ -250,6 +258,7 @@ The hardware requirements for Falcon vary depending on the version:
 *	Falcon-40B: 
   * Requires at least 40-80 GB of VRAM, suitable for enterprise-level GPUs like the NVIDIA A100.
   * For training and fine-tuning, multi-GPU configurations or HPC clusters are recommended.
+    
 Falcon is known for optimizing hardware resources, ensuring competitive inference times even on less powerful configurations.
 
 #### Supported Frameworks
@@ -291,136 +300,146 @@ Falcon is released under the Apache 2.0 license, allowing full usage rights for 
 ## BLOOM[^5]
 BLOOM (BigScience Large Open-science Open-access Multilingual Language Model) is an open-source language model developed as part of the BigScience project, an international collaboration between researchers and tech companies. Launched in 2022, BLOOM is designed to support over 46 languages and 13 programming languages, making it one of the most versatile and multilingual models available.
 BLOOM was created with the goal of democratizing access to large models, ensuring transparency and accessibility. It is particularly suitable for applications requiring a deep understanding of text and high-quality multilingual generation. The model was trained using computational resources provided by Jean Zay, one of the most powerful supercomputers in Europe, and is optimized to operate on proprietary hardware.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 BLOOM is available in several configurations to meet various computational needs:
-•	BLOOM-560M: A lightweight version with 560 million parameters.
-•	BLOOM-7B1: The standard version with 7.1 billion parameters, balanced between performance and resource requirements.
-•	BLOOM-176B: The full version with 176 billion parameters, designed for advanced applications and complex NLP tasks.
+*	BLOOM-560M: A lightweight version with 560 million parameters.
+*	BLOOM-7B1: The standard version with 7.1 billion parameters, balanced between performance and resource requirements.
+*	BLOOM-176B: The full version with 176 billion parameters, designed for advanced applications and complex NLP tasks.
+
 These different sizes allow users to choose the version best suited to their hardware resources and application goals.
-Hardware Requirements
+
+#### Hardware Requirements
 Hardware requirements vary depending on the model version chosen:
-•	BLOOM-560M: 
-o	Requires about 4 GB of VRAM, making it executable on mid-range consumer GPUs (e.g., NVIDIA GTX 1660).
-o	For CPUs, at least 8 GB of RAM is required for smooth inference.
-•	BLOOM-7B1: 
-o	Requires about 16-20 GB of VRAM, suitable for GPUs like NVIDIA RTX 3090 or higher.
-o	For local training, it's recommended to use at least 2 GPUs with parallel configurations.
-•	BLOOM-176B: 
-o	Requires >=350 GB of VRAM, suitable only for HPC clusters or high-end GPUs like NVIDIA A100.
-o	Full training requires advanced infrastructures and the use of distributed frameworks such as Megatron-Deepspeed.
-Supported Frameworks
+* BLOOM-560M: 
+  *	Requires about 4 GB of VRAM, making it executable on mid-range consumer GPUs (e.g., NVIDIA GTX 1660).
+  *	For CPUs, at least 8 GB of RAM is required for smooth inference.
+* BLOOM-7B1: 
+  *	Requires about 16-20 GB of VRAM, suitable for GPUs like NVIDIA RTX 3090 or higher.
+  *	For local training, it's recommended to use at least 2 GPUs with parallel configurations.
+* BLOOM-176B: 
+  *	Requires >=350 GB of VRAM, suitable only for HPC clusters or high-end GPUs like NVIDIA A100.
+  *	Full training requires advanced infrastructures and the use of distributed frameworks such as Megatron-Deepspeed.
+
+#### Supported Frameworks
 BLOOM is compatible with major machine learning frameworks:
-•	Hugging Face Transformers: BLOOM is fully integrated into the library, making it easy to use for both research and business applications.
-•	DeepSpeed: Optimized for large-scale distributed training and inference.
-•	PyTorch: Used as the main framework for BLOOM's development and execution.
-•	TensorFlow (unofficial): Some community contributions have made BLOOM usable in TensorFlow as well.
+*	Hugging Face Transformers: BLOOM is fully integrated into the library, making it easy to use for both research and business applications.
+*	DeepSpeed: Optimized for large-scale distributed training and inference.
+*	PyTorch: Used as the main framework for BLOOM's development and execution.
+*	TensorFlow (unofficial): Some community contributions have made BLOOM usable in TensorFlow as well.
+
 This wide compatibility makes BLOOM accessible to a variety of users and purposes.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 BLOOM is designed to support both full training and fine-tuning:
-•	Full Training: 
-o	Requires advanced infrastructures and large multilingual datasets.
-o	Includes optimizations specific to handling low-resource languages.
-•	Fine-Tuning: 
-o	Techniques such as Parameter Efficient Fine-Tuning (PEFT) and Prompt Tuning can be used to specialize the model in specific tasks, reducing computational costs.
-o	BLOOM also supports approaches like LoRA, enabling rapid fine-tuning on less powerful hardware.
-Querying Modes (API, CLI, etc.)
+*	Full Training: 
+  *	Requires advanced infrastructures and large multilingual datasets.
+  *	Includes optimizations specific to handling low-resource languages.
+*	Fine-Tuning: 
+  *	Techniques such as Parameter Efficient Fine-Tuning (PEFT) and Prompt Tuning can be used to specialize the model in specific tasks, reducing computational costs.
+  *	BLOOM also supports approaches like LoRA, enabling rapid fine-tuning on less powerful hardware.
+
+#### Querying Modes (API, CLI, etc.)
 Querying modes for BLOOM include:
-•	Local APIs: 
-o	Thanks to integration with Hugging Face, it's easy to set up a REST endpoint for custom queries.
-•	CLI: 
-o	Allows for text generation and analysis directly from the command line, ideal for quick testing.
-•	Interactive UIs: 
-o	BLOOM can be integrated with platforms like Gradio to create graphical interfaces for direct interaction with users.
+*	Local APIs: 
+  *	Thanks to integration with Hugging Face, it's easy to set up a REST endpoint for custom queries.
+*	CLI: 
+  *	Allows for text generation and analysis directly from the command line, ideal for quick testing.
+*	Interactive UIs: 
+  *	BLOOM can be integrated with platforms like Gradio to create graphical interfaces for direct interaction with users.
+
 Inference pipelines can be run in batch or real-time modes, adapting to different operational needs.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 BLOOM is particularly powerful for applications requiring the management and interpretation of complex documents:
-•	Automatic Summarization: 
-o	BLOOM generates accurate and concise summaries of long documents, such as academic articles or business reports.
-•	Semantic Search: 
-o	Thanks to its advanced contextual understanding, BLOOM can be integrated into search systems to retrieve relevant information from large document archives.
-•	Key Data Extraction: 
-o	It can identify and structure information such as named entities, dates, and numbers from unstructured documents.
-•	Multilingual Analysis: 
-o	Designed to support many languages, BLOOM is ideal for applications involving multilingual documents, such as translation or thematic tagging.
+*	Automatic Summarization: BLOOM generates accurate and concise summaries of long documents, such as academic articles or business reports.
+*	Semantic Search: Thanks to its advanced contextual understanding, BLOOM can be integrated into search systems to retrieve relevant information from large document archives.
+*	Key Data Extraction: It can identify and structure information such as named entities, dates, and numbers from unstructured documents.
+*	Multilingual Analysis: Designed to support many languages, BLOOM is ideal for applications involving multilingual documents, such as translation or thematic tagging.
+
 With OCR integration, BLOOM can process non-textual documents and convert them into organized, searchable content.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 BLOOM is released under the RAIL (Responsible AI License), which imposes some restrictions on the use of the model:
-•	Permission to Use: BLOOM can be used for commercial, academic, and personal purposes, as long as it does not violate the restrictions set by the license.
-•	Restrictions: 
-o	The model cannot be used for activities that promote harm, discrimination, or privacy violations.
-o	The use of the model must comply with local and international laws.
+*	Permission to Use: BLOOM can be used for commercial, academic, and personal purposes, as long as it does not violate the restrictions set by the license.
+*	Restrictions: 
+  * The model cannot be used for activities that promote harm, discrimination, or privacy violations.
+  *	The use of the model must comply with local and international laws.
 
 The RAIL license encourages ethical and responsible use of the model, requiring users to ensure that applications do not have negative impacts.
 
-Mistral
-(see [Ref. 06])
+## Mistral[^6]
 Mistral is a next-generation language model developed by Mistral AI, a European startup known for its focus on creating open-weight models optimized for local execution. Mistral was launched in 2023 as an efficient and scalable alternative to large language models, with a strong emphasis on hardware optimization and transparency.
 Designed to deliver high performance on limited hardware, Mistral is renowned for introducing innovative compression and pruning techniques (removing unused parameters), which significantly reduce computational requirements without compromising quality. This makes it ideal for companies and researchers looking for a powerful model that is easy to deploy on private infrastructures.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 Mistral is available in modular configurations to suit different needs:
-•	Mistral-7B: A model with 7 billion parameters, designed for high performance in local and business scenarios.
-•	Mistral-3B: A reduced variant with 3 billion parameters, ideal for less complex tasks or environments with limited hardware resources.
+*	Mistral-7B: A model with 7 billion parameters, designed for high performance in local and business scenarios.
+*	Mistral-3B: A reduced variant with 3 billion parameters, ideal for less complex tasks or environments with limited hardware resources.
+
 This flexibility allows users to choose the most suitable model based on application requirements.
-Hardware Requirements
+
+#### Hardware Requirements
 Mistral’s hardware requirements are optimized for maximum efficiency:
-•	Mistral-7B: 
-o	16 GB of VRAM for inference, compatible with high-end consumer GPUs like NVIDIA RTX 3090 or 4090.
-o	For fine-tuning, it is recommended to use 32 GB of VRAM or a multi-GPU setup.
-•	Mistral-3B: 
-o	Can run with 8 GB of VRAM, making it compatible with mid-range GPUs like NVIDIA GTX 1660.
-o	On CPUs, at least 16 GB of RAM is required, ideal for lighter applications.
+*	Mistral-7B: 
+  *	16 GB of VRAM for inference, compatible with high-end consumer GPUs like NVIDIA RTX 3090 or 4090.
+  *	For fine-tuning, it is recommended to use 32 GB of VRAM or a multi-GPU setup.
+* Mistral-3B: 
+  *	Can run with 8 GB of VRAM, making it compatible with mid-range GPUs like NVIDIA GTX 1660.
+  *	On CPUs, at least 16 GB of RAM is required, ideal for lighter applications.
+
 These reduced hardware requirements make Mistral particularly suitable for organizations with limited resources.
-Supported Frameworks
+
+#### Supported Frameworks
 Mistral offers excellent compatibility with major deep learning frameworks:
-•	PyTorch: The main framework for developing and deploying Mistral.
-•	Hugging Face Transformers: Fully integrates Mistral, simplifying its use in existing pipelines.
-•	ONNX Runtime: Enables inference optimization across a wide range of hardware, including edge devices.
-•	DeepSpeed: Supports distributed setups for large-scale training.
+*	PyTorch: The main framework for developing and deploying Mistral.
+*	Hugging Face Transformers: Fully integrates Mistral, simplifying its use in existing pipelines.
+*	ONNX Runtime: Enables inference optimization across a wide range of hardware, including edge devices.
+* DeepSpeed: Supports distributed setups for large-scale training.
+
 Pre-trained models available on various platforms speed up deployment in business and research environments.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 Mistral is designed to support flexible training and fine-tuning approaches:
-•	Full Training: 
-o	Requires advanced GPU clusters and large-scale datasets.
-o	Includes optimizations to handle specific tasks, such as processing low-resource languages.
-•	Fine-Tuning: 
-o	Supports techniques such as Low-Rank Adaptation (LoRA), which reduce computational costs.
-o	Prompt tuning can be used to adapt the model to specific tasks without modifying the main weights.
-o	Fine-tuning is particularly effective for customizing Mistral in vertical domains like medicine, law, or finance.
-Querying Modes (API, CLI, etc.)
+*	Full Training: 
+  *	Requires advanced GPU clusters and large-scale datasets.
+  *	Includes optimizations to handle specific tasks, such as processing low-resource languages.
+*	Fine-Tuning: 
+  *	Supports techniques such as Low-Rank Adaptation (LoRA), which reduce computational costs.
+  *	Prompt tuning can be used to adapt the model to specific tasks without modifying the main weights.
+*	Fine-tuning is particularly effective for customizing Mistral in vertical domains like medicine, law, or finance.
+
+#### Querying Modes (API, CLI, etc.)
 Mistral’s querying modes include:
-•	Local APIs: 
-o	Allows easy setup of REST endpoints for private inferences.
-•	CLI: 
-o	Useful for quick testing and batch task execution.
-•	Custom UIs: 
-o	Platforms like Streamlit or Gradio can be integrated to create intuitive interfaces.
+*	Local APIs: Allows easy setup of REST endpoints for private inferences.
+*	CLI: Useful for quick testing and batch task execution.
+*	Custom UIs: Platforms like Streamlit or Gradio can be integrated to create intuitive interfaces.
+
 Mistral supports both asynchronous and real-time pipelines, adapting to different operational needs.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 Mistral excels in processing complex documents:
-•	Advanced Summarization: 
-o	Generates coherent summaries even from lengthy documents, such as technical reports or academic papers.
-•	Information Extraction: 
-o	Capable of identifying key entities, events, and concepts within unstructured texts.
-•	Semantic Organization: 
-o	Can categorize documents based on relevant themes or topics.
-•	Multilingual Support: 
-o	Performs excellently in handling documents written in various languages.
-•	OCR Compatibility: 
-o	Can be used to analyze and organize scanned documents or text images.
+*	Advanced Summarization: Generates coherent summaries even from lengthy documents, such as technical reports or academic papers.
+*	Information Extraction: Capable of identifying key entities, events, and concepts within unstructured texts.
+*	Semantic Organization: Can categorize documents based on relevant themes or topics.
+*	Multilingual Support: Performs excellently in handling documents written in various languages.
+*	OCR Compatibility: Can be used to analyze and organize scanned documents or text images.
+
 Thanks to its efficient architecture, Mistral is particularly suited for business applications like archiving, semantic search, and knowledge bases.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 Mistral is distributed with an open-weight license, ensuring freedom of use for both commercial and non-commercial purposes. However, specific details regarding the license may vary depending on the model version and agreement with Mistral AI.
-•	Freedom of Use: 
-o	Users can modify, adapt, and distribute the model without significant restrictions.
-•	Ethical Restrictions: 
-o	Mistral AI encourages the responsible use of the model, prohibiting applications that could violate human rights or ethical norms.
+*	Freedom of Use: Users can modify, adapt, and distribute the model without significant restrictions.
+*	Ethical Restrictions: Mistral AI encourages the responsible use of the model, prohibiting applications that could violate human rights or ethical norms.
 
 This license makes Mistral an attractive option for organizations in need of scalable and customizable solutions.
 
-Alpaca
-(see [Ref. 07])
+
+## Alpaca[^7]
 Alpaca is a language model developed by Stanford University as a fork of Meta AI's popular LLaMA model. Created in 2023, Alpaca is designed to provide a lightweight and specialized machine learning platform, suitable for conversational tasks and specific domains. One of its main features is optimization for rapid and low-cost fine-tuning, using innovative techniques that make it highly accessible even for those with limited resources.
 Alpaca was trained using curated datasets and semi-supervised generation methods, creating a model capable of understanding and generating contextually relevant responses. This makes it ideal for business, educational, and research applications, where a high-performing model is required without relying on cloud infrastructure.
 Technical Details
