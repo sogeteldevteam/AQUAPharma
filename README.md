@@ -737,121 +737,121 @@ The variety allows for customization based on specific requirements.
 
 #### Hardware Requirements
 Gemma’s hardware requirements vary depending on the model size:
-•	Gemma-Lite: 
-o	8-16 GB of VRAM for inference on GPU.
-o	At least 16 GB of RAM for CPU execution.
-•	Gemma-Standard: 
-o	24-32 GB of VRAM, executable on high-end GPUs such as NVIDIA A100 or RTX 3090.
-o	For CPU, at least 64 GB of RAM is required.
-•	Gemma-Pro: 
-o	48-64 GB of VRAM or multi-GPU configurations.
-o	Requires CPU clusters with at least 128 GB of RAM for complex tasks.
+*	Gemma-Lite: 
+   * 8-16 GB of VRAM for inference on GPU.
+   * At least 16 GB of RAM for CPU execution.
+* Gemma-Standard: 
+   * 24-32 GB of VRAM, executable on high-end GPUs such as NVIDIA A100 or RTX 3090.
+   * For CPU, at least 64 GB of RAM is required.
+* Gemma-Pro: 
+   * 48-64 GB of VRAM or multi-GPU configurations.
+   * Requires CPU clusters with at least 128 GB of RAM for complex tasks.
+
 Smaller configurations are ideal for local development environments.
-Supported Frameworks
+
+#### Supported Frameworks
 Gemma supports a range of frameworks for integration and optimization:
-•	PyTorch: The main framework for training and inference.
-•	Hugging Face Transformers: Compatible for easy use in NLP pipelines.
-•	ONNX Runtime: For efficient inference across a variety of hardware.
-•	DeepSpeed: Optimizes distributed training for larger configurations.
+* PyTorch: The main framework for training and inference.
+*	Hugging Face Transformers: Compatible for easy use in NLP pipelines.
+*	ONNX Runtime: For efficient inference across a variety of hardware.
+*	DeepSpeed: Optimizes distributed training for larger configurations.
+
 The wide framework support ensures flexibility for developers.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 Gemma is designed to support efficient training and fine-tuning:
-•	Full Training: 
-o	Requires high-quality datasets and advanced infrastructure.
-o	Gemma uses compression techniques to reduce computational costs.
-•	Fine-Tuning: 
-o	Supports lightweight approaches such as adapter layers and LoRA.
-o	Enables quick customization for vertical applications or specific tasks.
+*	Full Training:
+   * Requires high-quality datasets and advanced infrastructure.
+   * Gemma uses compression techniques to reduce computational costs.
+* Fine-Tuning: 
+   * Supports lightweight approaches such as adapter layers and LoRA.
+   * Enables quick customization for vertical applications or specific tasks.
+
 The model is optimized to reduce training time and costs.
-Querying Modes (API, CLI, etc.)
+
+#### Querying Modes (API, CLI, etc.)
 The querying modes provided by Gemma are designed for flexibility:
-•	Local APIs: 
-o	Allows inference on private infrastructures without cloud dependencies.
-•	CLI: 
-o	Command-line tools for fast interaction and batch tasks.
-•	Custom Graphical Interfaces: 
-o	Integrable via frameworks like Gradio for building user interfaces.
-•	Dedicated SDK: 
-o	Provides a standardized interface for integration into existing systems.
+* Local APIs: Allows inference on private infrastructures without cloud dependencies.
+* CLI: Command-line tools for fast interaction and batch tasks.
+* Custom Graphical Interfaces: Integrable via frameworks like Gradio for building user interfaces.
+* Dedicated SDK: Provides a standardized interface for integration into existing systems.
+
 These modes ensure versatile use in various business contexts.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 Gemma excels in document management and text analysis:
-•	Smart Summaries: 
-o	Generates clear, structured summaries of long documents.
-•	Advanced Indexing: 
-o	Organizes documents in a structured way, facilitating search and access.
-•	Key Data Extraction: 
-o	Identifies and categorizes relevant information from complex documents.
-•	Multilingual Support: 
-o	Processes documents in numerous languages for global contexts.
-•	OCR and Scanned Document Analysis: 
-o	Compatible with OCR pipelines for digitizing and analyzing paper documents.
+* Smart Summaries: Generates clear, structured summaries of long documents.
+* Advanced Indexing: Organizes documents in a structured way, facilitating search and access.
+* Key Data Extraction: Identifies and categorizes relevant information from complex documents.
+* Multilingual Support: Processes documents in numerous languages for global contexts.
+* OCR and Scanned Document Analysis: Compatible with OCR pipelines for digitizing and analyzing paper documents.
+
 These capabilities make Gemma a valuable asset for businesses managing large document archives.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 Gemma is distributed with a modified open-source license that offers flexibility with some restrictions:
-•	Permitted Uses: 
-o	Research, academic, and commercial applications under certain conditions.
-•	Restrictions: 
-o	Use for harmful or unethical purposes is prohibited.
-o	Attribution to the original project is required in public implementations.
+* Permitted Uses: 
+   * Research, academic, and commercial applications under certain conditions.
+* Restrictions: 
+   * Use for harmful or unethical purposes is prohibited.
+   * Attribution to the original project is required in public implementations.
 
 The license allows for broad adoption, balancing accessibility and responsibility.
 
 ## Retrieval-Augmented Generation (RAG): A Hybrid Model for Optimizing the Process
 RAG (Retrieval-Augmented Generation) is an innovative approach that combines information retrieval mechanisms with text generation based on large language models (LLMs). This paradigm is designed to overcome the intrinsic limitations of language models, such as the lack of real-time updates and the ability to handle extremely broad or specialized contexts.
 With RAG, the model does not rely exclusively on pre-trained knowledge but integrates documents, databases, or external repositories that are updated in real-time, retrieving relevant information as needed. This approach ensures more accurate, up-to-date, and contextualized responses.
-How RAG Works
+
+### How RAG Works
 The RAG architecture consists of two main components:
 1.	Information Retrieval Component (Retriever):
-o	Uses search techniques based on semantic embeddings, indexing, and document ranking.
-o	Retrieves relevant documents from a data corpus, such as knowledge bases, corporate databases, or cloud repositories.
+    * Uses search techniques based on semantic embeddings, indexing, and document ranking.
+    * Retrieves relevant documents from a data corpus, such as knowledge bases, corporate databases, or cloud repositories.
 2.	Generative Component (Generator):
-o	Integrates the retrieved information from the previous phase with the capabilities of an LLM to generate responses.
-o	The generation process is based on an enriched context that includes the relevant retrieved data.
+    * Integrates the retrieved information from the previous phase with the capabilities of an LLM to generate responses.
+    * The generation process is based on an enriched context that includes the relevant retrieved data.
+
 This process occurs in real-time, ensuring that responses are always informed by the most relevant data available.
-Advantages of RAG
+
+### Advantages of RAG
 Adopting a RAG approach offers numerous advantages, including:
-•	More Accurate Responses: Integrating external data reduces reliance solely on the model's pre-trained knowledge.
-•	Real-Time Updates: Allows working with constantly updated data without needing to re-train the LLM.
-•	Reduced Hallucination: Minimizes the generation of inaccurate information by directly verifying with retrieved data.
-•	Optimized Resource Usage: Limits high computational demands by focusing only on relevant data.
-RAG and LLM Integration Workflow
+* More Accurate Responses: Integrating external data reduces reliance solely on the model's pre-trained knowledge.
+* Real-Time Updates: Allows working with constantly updated data without needing to re-train the LLM.
+* Reduced Hallucination: Minimizes the generation of inaccurate information by directly verifying with retrieved data.
+* Optimized Resource Usage: Limits high computational demands by focusing only on relevant data.
+
+### RAG and LLM Integration Workflow
 In our project, RAG will be implemented as a preliminary phase before the language model (LLM), following these steps:
 1.	Data Indexing:
-o	All documents, reports, and corporate knowledge bases will be pre-processed and indexed using vector embedding techniques.
-o	Tools like FAISS, Pinecone, or Weaviate can be used to create an efficient search system.
+    * All documents, reports, and corporate knowledge bases will be pre-processed and indexed using vector embedding techniques.
+    * Tools like FAISS, Pinecone, or Weaviate can be used to create an efficient search system.
 2.	Information Retrieval:
-o	A user query will be converted into a vector embedding and compared with the indexed corpus.
-o	The most relevant documents will be selected to be used as input for the generative context.
+    * A user query will be converted into a vector embedding and compared with the indexed corpus.
+    * The most relevant documents will be selected to be used as input for the generative context.
 3.	Response Generation:
-o	LLMs like GPT-J, LLaMA, or other selected models will use the retrieved documents as context to generate a personalized response.
-o	The model can be configured to attribute the sources of the provided information, improving transparency.
-Why Use RAG in the Project
-The adoption of a RAG approach offers numerous advantages, including:
-•	Management of Sensitive Data: Allows querying of company data while keeping environmental information controlled and complying with privacy regulations.
-•	Versatility: Applicable in various scenarios, from document management to customer service based on company information.
-•	Scalable Querying: The system can be adapted to work with corpora of varying sizes, integrating new data without substantial changes.
-Technologies Used for RAG
-•	Retrieval Tools:
-FAISS, Pinecone, ElasticSearch for indexing and search.
-•	Compatible LLMs:
-Flexible models like GPT-NeoX, Claude, or Falcon can be integrated into the RAG pipeline to ensure optimal performance.
-•	Development Frameworks:
-LangChain or Haystack to implement the integration between retrieval and generation in a single pipeline.
+    * LLMs like GPT-J, LLaMA, or other selected models will use the retrieved documents as context to generate a personalized response.
+    * The model can be configured to attribute the sources of the provided information, improving transparency.
 
-Final Model Selection: LLaMA
+### Why Use RAG in the Project
+The adoption of a RAG approach offers numerous advantages, including:
+* Management of Sensitive Data: Allows querying of company data while keeping environmental information controlled and complying with privacy regulations.
+* Versatility: Applicable in various scenarios, from document management to customer service based on company information.
+* Scalable Querying: The system can be adapted to work with corpora of varying sizes, integrating new data without substantial changes.
+
+### Technologies Used for RAG
+* Retrieval Tools: FAISS, Pinecone, ElasticSearch for indexing and search.
+* Compatible LLMs: Flexible models like GPT-NeoX, Claude, or Falcon can be integrated into the RAG pipeline to ensure optimal performance.
+* Development Frameworks: LangChain or Haystack to implement the integration between retrieval and generation in a single pipeline.
+
+### Final Model Selection: LLaMA
 After a thorough analysis of the technical features, capabilities, and requirements of each model, we have chosen LLaMA (Large Language Model Meta AI), developed by Meta AI, for our project.
 Reasons for Choosing LLaMA:
-1.	Flexibility and Performance:
-LLaMA offers an excellent balance between model size and performance, with configurations that adapt to different computational and application needs.
-2.	Local Deployment:
-The model is designed to run on local infrastructures, ensuring privacy and control over corporate data.
-3.	Open-Source:
-The flexible license allows customization and optimization of the model based on the project’s needs, providing freedom for adaptation.
-4.	Document Management Capabilities:
-LLaMA stands out for its ability to analyze, organize, and synthesize information from complex documents, making it ideal for business requirements.
-5.	Support for RAG:
-LLaMA integrates perfectly into a Retrieval-Augmented Generation pipeline, enhancing the overall effectiveness of the system.
+1.	Flexibility and Performance: LLaMA offers an excellent balance between model size and performance, with configurations that adapt to different computational and application needs.
+2.	Local Deployment: The model is designed to run on local infrastructures, ensuring privacy and control over corporate data.
+3.	Open-Source: The flexible license allows customization and optimization of the model based on the project’s needs, providing freedom for adaptation.
+4.	Document Management Capabilities: LLaMA stands out for its ability to analyze, organize, and synthesize information from complex documents, making it ideal for business requirements.
+5.	Support for RAG: LLaMA integrates perfectly into a Retrieval-Augmented Generation pipeline, enhancing the overall effectiveness of the system.
+
 The choice of LLaMA reflects the intention to adopt a reliable, scalable, and secure solution, capable of fully meeting the project's objectives.
 
 ## References
