@@ -335,11 +335,11 @@ This wide compatibility makes BLOOM accessible to a variety of users and purpose
 #### Training and Fine-Tuning Modes
 BLOOM is designed to support both full training and fine-tuning:
 *	Full Training: 
-  *	Requires advanced infrastructures and large multilingual datasets.
-  *	Includes optimizations specific to handling low-resource languages.
+  -	Requires advanced infrastructures and large multilingual datasets.
+  -	Includes optimizations specific to handling low-resource languages.
 *	Fine-Tuning: 
-  *	Techniques such as Parameter Efficient Fine-Tuning (PEFT) and Prompt Tuning can be used to specialize the model in specific tasks, reducing computational costs.
-  *	BLOOM also supports approaches like LoRA, enabling rapid fine-tuning on less powerful hardware.
+  -	Techniques such as Parameter Efficient Fine-Tuning (PEFT) and Prompt Tuning can be used to specialize the model in specific tasks, reducing computational costs.
+  -	BLOOM also supports approaches like LoRA, enabling rapid fine-tuning on less powerful hardware.
 
 #### Querying Modes (API, CLI, etc.)
 Querying modes for BLOOM include:
