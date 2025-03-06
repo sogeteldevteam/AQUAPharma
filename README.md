@@ -69,6 +69,7 @@ LLaMA was released in multiple variants, each with an increasing number of param
 *	LLaMA-13B: Intermediate model, with 13 billion parameters.
 *	LLaMA-30B: Advanced version, with 30 billion parameters.
 *	LLaMA-65B: The most powerful version, with 65 billion parameters.
+  
 Each variant offers a different balance between performance and computational requirements, allowing users to choose the most suitable solution.
 
 #### Hardware Requirements
@@ -77,6 +78,7 @@ To run LLaMA on private machines, hardware requirements depend on the chosen mod
 *	LLaMA-13B: Needs around 32 GB of VRAM, ideal for high-end GPUs or multi-GPU setups.
 *	LLaMA-30B: Consumes around 64 GB of VRAM, requiring more GPUs (e.g., NVIDIA A100 or equivalent systems).
 *	LLaMA-65B: Requires 128 GB of VRAM, often run in HPC environments or with multiple advanced GPUs.
+  
 For CPU operations, machines with ample RAM (at least 2-4 times the model's parameters) and modern multi-core processors are necessary.
 
 #### Supported Frameworks
@@ -90,9 +92,9 @@ This compatibility makes LLaMA particularly versatile and easy to adapt to vario
 LLaMA supports the following training modes:
 *	Full Training: Requires large-scale datasets and significant hardware resources.
 *	Fine-tuning on Specific Tasks: Allows customization of the model for specific needs, using smaller datasets and reducing computational costs.
-  Common techniques include: 
-  1.	LoRA (Low-Rank Adaptation): Reduces memory usage during fine-tuning.
-  2. Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
+  Common techniques include:
+ 	* LoRA (Low-Rank Adaptation): Reduces memory usage during fine-tuning.
+  * Parameter-efficient fine-tuning (PEFT): An approach to update only a portion of the parameters.
 Tools like Hugging Face Trainer or Fairseq are commonly used to facilitate these operations.
 
 #### Querying Modes (API, CLI, etc.)
@@ -144,11 +146,13 @@ GPT-J supports both full training and custom fine-tuning modes, making it ideal 
 *	Full Training:
 Requires a large dataset and significant hardware resources (high-performance GPUs or TPUs). This is rarely needed, as the pre-trained model already covers a broad range of tasks.
 *	Fine-Tuning:
-Allows customization of GPT-J for specific tasks using techniques such as: 
-1.	Adapter Layers: Adds lightweight layers to avoid updating the entire model.
-2.	LoRA (Low-Rank Adaptation): Reduces memory usage by updating only a portion of the model parameters.
+  Allows customization of GPT-J for specific tasks using techniques such as: 
+  *	Adapter Layers: Adds lightweight layers to avoid updating the entire model.
+  * LoRA (Low-Rank Adaptation): Reduces memory usage by updating only a portion of the model parameters.
+
 Tools like Hugging Face Trainer make the fine-tuning process relatively simple.
-Querying Modes (API, CLI, etc.)
+
+#### Querying Modes (API, CLI, etc.)
 GPT-J can be queried through various modes, adapting to different use cases:
 *	Local APIs: A local server can be run on private machines to receive requests via REST API. Libraries like FastAPI and Flask are commonly used.
 *	CLI (Command Line Interface): Ideal for quick tests or batch processing.
@@ -160,6 +164,7 @@ GPT-J offers advanced capabilities for document management and reading due to it
 *	Information Extraction: Can identify dates, names, numbers, or other specific details with high accuracy.
 *	Document Classification: Can be configured to assign thematic labels or categorize documents based on content.
 *	Semantic Search: Paired with embedding techniques, GPT-J supports advanced searching of phrases or concepts in document databases.
+
 For structured documents or those containing tabular data, GPT-J can analyze and answer questions about the data itself, making it a versatile choice for managing business content or reporting. As with LLaMA, integration with OCR is necessary for non-textual documents.
 
 #### License and Usage Restrictions
@@ -176,6 +181,7 @@ The model supports natural language processing (NLP) tasks such as text generati
 GPT-NeoX is designed to support large-scale models, with configurations including:
 *	Models with variable sizes, generally ranging from 6B to 20B parameters.
 *	Capability to scale to larger sizes (over 100B parameters) with appropriate hardware.
+
 The flexibility in size allows users to choose the model that fits their computational and application needs.
 
 #### Hardware Requirements
@@ -194,6 +200,7 @@ GPT-NeoX is based on PyTorch and uses advanced frameworks for distributed optimi
 * DeepSpeed: To optimize memory usage and reduce computational costs during training and inference.
 * Megatron-LM: To scale training across multi-GPU configurations or HPC clusters.
 * Hugging Face Transformers: Supported through community integrations for easier and more flexible implementation.
+
 This compatibility allows GPT-NeoX to be integrated into many existing pipelines, both for research and business applications.
 
 #### Training and Fine-Tuning Modes
