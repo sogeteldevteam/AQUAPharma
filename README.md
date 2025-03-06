@@ -43,16 +43,16 @@ Below are the models we have taken into consideration.
 7.	[**Alpaca**](#alpaca7)[^7]
   * Based on LLaMA, trained by Stanford for conversational purposes.
   * Ideal for targeted tasks on private infrastructures.
-8.	[**OPT (Open Pretrained Transformer)**](#opt)[^8]
+8.	[**OPT (Open Pretrained Transformer)**](#opt8)[^8]
   * Developed by Meta.
   * Created to reduce dependency on closed models like GPT-3.
-9.	[**RedPajama**](#redpajama)[^9]
+9.	[**RedPajama**](#redpajama9)[^9]
   * Open source, designed to replicate datasets used by high-level models such as GPT-3.
   * Focused on accessibility and customization.
-10.	[**Claude**](#claude)[^10]
+10.	[**Claude**](#claude10)[^10]
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
-11.	[**Gemma**](#gemma)[^11]
+11.	[**Gemma**](#gemma11)[^11]
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
 
@@ -507,225 +507,235 @@ This license restricts direct commercial use without approval but allows flexibi
 ## OPT[^8]
 OPT (Open Pretrained Transformer) is a family of language models developed by Meta AI in 2022 as an open-source alternative to proprietary large models like GPT-3. The project stands out for the transparency of the code, training datasets, and processes used to build the model, making it a popular choice for the research community.
 OPT is designed to support a wide range of NLP tasks, such as text generation, autocomplete, and document summarization. It is known for being relatively efficient compared to other models of comparable size, making it suitable for use on private and local hardware.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 The OPT family offers a range of sizes to meet various needs:
-•	OPT-125M: 125 million parameters, ideal for simple tasks.
-•	OPT-350M: 350 million parameters, suitable for light projects.
-•	OPT-1.3B: 1.3 billion parameters, for intermediate applications.
-•	OPT-13B: 13 billion parameters, one of the more advanced configurations.
-•	OPT-175B: 175 billion parameters, comparable to GPT-3, for advanced-level tasks.
+* OPT-125M: 125 million parameters, ideal for simple tasks.
+* OPT-350M: 350 million parameters, suitable for light projects.
+* OPT-1.3B: 1.3 billion parameters, for intermediate applications.
+* OPT-13B: 13 billion parameters, one of the more advanced configurations.
+* OPT-175B: 175 billion parameters, comparable to GPT-3, for advanced-level tasks.
+
 This variety allows users to choose the most suitable model based on available resources and task complexity.
-Hardware Requirements
+
+#### Hardware Requirements
 The hardware requirements vary based on the model size:
-•	OPT-125M and OPT-350M: 
-o	Can run on GPUs with 8-12 GB of VRAM or CPUs with at least 16 GB of RAM.
-•	OPT-1.3B: 
-o	Requires 16 GB of VRAM or CPU configurations with at least 32 GB of RAM.
-•	OPT-13B: 
-o	Requires 40 GB of VRAM, so high-end GPUs or multi-GPU configurations are recommended.
-•	OPT-175B: 
-o	Requires 350 GB of VRAM or the use of distribution technologies like DeepSpeed on GPU clusters.
+* OPT-125M and OPT-350M: Can run on GPUs with 8-12 GB of VRAM or CPUs with at least 16 GB of RAM.
+* OPT-1.3B: Requires 16 GB of VRAM or CPU configurations with at least 32 GB of RAM.
+* OPT-13B: Requires 40 GB of VRAM, so high-end GPUs or multi-GPU configurations are recommended.
+* OPT-175B: Requires 350 GB of VRAM or the use of distribution technologies like DeepSpeed on GPU clusters.
+
 Smaller models are suitable for local use, while larger ones need advanced infrastructure.
-Supported Frameworks
+
+#### Supported Frameworks
 OPT is compatible with major machine learning frameworks:
-•	PyTorch: The primary framework used for model development and inference.
-•	Hugging Face Transformers: Allows easy integration of OPT into NLP pipelines.
-•	DeepSpeed and FairScale: Optimize training and distributed inference for larger versions.
-•	ONNX Runtime: Enables efficient inference on a variety of hardware.
+* PyTorch: The primary framework used for model development and inference.
+* Hugging Face Transformers: Allows easy integration of OPT into NLP pipelines.
+* DeepSpeed and FairScale: Optimize training and distributed inference for larger versions.
+* ONNX Runtime: Enables efficient inference on a variety of hardware.
+
 The broad framework support facilitates implementation in various operating environments.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 OPT supports flexible methods for training and fine-tuning:
-•	Full Training: 
-o	Requires large-scale datasets and advanced infrastructure.
-o	Meta provides detailed guidelines to replicate the original training process.
-•	Fine-Tuning: 
-o	Supports lightweight techniques such as Low-Rank Adaptation (LoRA) and prompt tuning.
-o	Fine-tuning can be done for specific tasks such as classification or semantic analysis, using limited resources.
-Querying Modes (API, CLI, etc.)
+*	Full Training:
+   * Requires large-scale datasets and advanced infrastructure.
+   * Meta provides detailed guidelines to replicate the original training process.
+*	Fine-Tuning: 
+   * Supports lightweight techniques such as Low-Rank Adaptation (LoRA) and prompt tuning.
+   * Fine-tuning can be done for specific tasks such as classification or semantic analysis, using limited resources.
+
+#### Querying Modes (API, CLI, etc.)
 OPT can be queried through various modes:
-•	Local APIs: 
-o	Configurable for use in private environments without cloud dependency.
-•	CLI: 
-o	Allows testing the model and performing batch tasks.
-•	Graphical Interfaces: 
-o	Integrates with tools like Gradio or Streamlit to create interactive UIs.
+* Local APIs: Configurable for use in private environments without cloud dependency.
+* CLI: Allows testing the model and performing batch tasks.
+* Graphical Interfaces: Integrates with tools like Gradio or Streamlit to create interactive UIs.
+
 OPT offers options for both synchronous and asynchronous pipelines.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 OPT demonstrates excellent document processing capabilities:
-•	Document Summarization: 
-o	Can generate concise summaries of reports, articles, and other long texts.
-•	Information Extraction: 
-o	Capable of identifying entities, relationships, and structured data from complex documents.
-•	Thematic Categorization: 
-o	Organizes documents based on predefined categories or topics.
-•	Multilingual Support: 
-o	Effectively handles documents written in various languages.
-•	OCR Text Processing: 
-o	Analyzes scanned documents and extracts structured information.
+* Document Summarization: Can generate concise summaries of reports, articles, and other long texts.
+* Information Extraction: Capable of identifying entities, relationships, and structured data from complex documents.
+* Thematic Categorization: Organizes documents based on predefined categories or topics.
+* Multilingual Support: Effectively handles documents written in various languages.
+* OCR Text Processing: Analyzes scanned documents and extracts structured information.
+
 These capabilities make it suitable for knowledge management and archiving.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 OPT is distributed with a non-commercial license to ensure transparency without profit-driven goals:
-•	Allowed Uses: 
-o	Research, academic development, and non-commercial projects.
-•	Restrictions: 
-o	Direct commercial use is not allowed without authorization.
-o	Meta enforces a strict code of conduct to prevent unethical uses of the model.
+* Allowed Uses: 
+   * Research, academic development, and non-commercial projects.
+* Restrictions: 
+   * Direct commercial use is not allowed without authorization.
+   * Meta enforces a strict code of conduct to prevent unethical uses of the model.
 
 This license encourages open research while limiting commercial applications.
 
-## RedPajama
-(see [Ref. 09])
+## RedPajama[^9]
 RedPajama is a family of language models developed as an open-source initiative by the AI research community, AI Together. It was created to replicate, improve, and democratize large language models through a transparent and collaborative approach.
 RedPajama stands out for its fully open training dataset, which is based on a large-scale collection of high-quality data, enabling a wide range of applications in natural language processing (NLP) tasks. The project supports training and usage on local hardware, making it ideal for businesses and researchers who want to avoid dependence on cloud infrastructure.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 RedPajama offers a range of models with different sizes:
-•	RedPajama-3B: 3 billion parameters, ideal for lightweight applications and specific vertical tasks.
-•	RedPajama-7B: 7 billion parameters, designed to handle complex NLP tasks.
-•	RedPajama-13B: A more advanced version for applications requiring high performance and generalization capabilities.
+* RedPajama-3B: 3 billion parameters, ideal for lightweight applications and specific vertical tasks.
+* RedPajama-7B: 7 billion parameters, designed to handle complex NLP tasks.
+* RedPajama-13B: A more advanced version for applications requiring high performance and generalization capabilities.
+
 The variety of sizes allows for great flexibility in usage.
-Hardware Requirements
+
+#### Hardware Requirements
 Hardware requirements vary depending on the model configuration:
-•	RedPajama-3B: 
-o	Requires 8-12 GB of VRAM for GPU inference, or at least 16 GB of RAM for CPU.
-•	RedPajama-7B: 
-o	Needs 16-24 GB of VRAM, suitable for GPUs like NVIDIA RTX 3090 or A5000.
-•	RedPajama-13B: 
-o	Requires 40+ GB of VRAM, or multi-GPU configurations for large-scale fine-tuning and inference.
+* RedPajama-3B: Requires 8-12 GB of VRAM for GPU inference, or at least 16 GB of RAM for CPU.
+* RedPajama-7B: Needs 16-24 GB of VRAM, suitable for GPUs like NVIDIA RTX 3090 or A5000.
+* RedPajama-13B: Requires 40+ GB of VRAM, or multi-GPU configurations for large-scale fine-tuning and inference.
+
 Smaller versions are well-optimized for use on local machines.
-Supported Frameworks
+
+#### Supported Frameworks
 RedPajama is compatible with various industry-leading frameworks:
-•	PyTorch: The primary framework for training and inference.
-•	Hugging Face Transformers: Allows easy integration of the model with existing pipelines.
-•	DeepSpeed: Enables optimization of distributed training on GPU infrastructure.
-•	ONNX Runtime: For fast and efficient inference on heterogeneous hardware.
+* PyTorch: The primary framework for training and inference.
+* Hugging Face Transformers: Allows easy integration of the model with existing pipelines.
+* DeepSpeed: Enables optimization of distributed training on GPU infrastructure.
+* ONNX Runtime: For fast and efficient inference on heterogeneous hardware.
+
 This compatibility expands usage opportunities for developers and researchers.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 RedPajama is designed to support both full training and fine-tuning:
-•	Full Training: 
-o	Uses large-scale open-source datasets, providing a transparent starting point for custom training.
-o	Supports distributed configurations for large models.
-•	Fine-Tuning: 
-o	Lightweight techniques like LoRA and adapter layers are available to customize the model economically.
-o	Ideal for specific tasks like sentiment analysis, response generation, or document summarization.
-Querying Modes (API, CLI, etc.)
+* Full Training: 
+   * Uses large-scale open-source datasets, providing a transparent starting point for custom training.
+   * Supports distributed configurations for large models.
+* Fine-Tuning: 
+   * Lightweight techniques like LoRA and adapter layers are available to customize the model economically.
+   * Ideal for specific tasks like sentiment analysis, response generation, or document summarization.
+
+#### Querying Modes (API, CLI, etc.)
 RedPajama has flexible and easy-to-implement querying modes:
-•	Local APIs: 
-o	Configurable for secure inference in private environments.
-•	CLI: 
-o	Suitable for rapid testing and batch tasks.
-•	Interactive UIs: 
-o	Integrable with tools like Gradio to facilitate user interaction.
+* Local APIs: Configurable for secure inference in private environments.
+* CLI: Suitable for rapid testing and batch tasks.
+* Interactive UIs: Integrable with tools like Gradio to facilitate user interaction.
+
 RedPajama also supports asynchronous pipelines for real-time applications.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 RedPajama is optimized for document management tasks:
-•	Advanced Summarization: 
-o	Produces high-quality summaries of articles, reports, and complex documents.
-•	Contextual Analysis: 
-o	Identifies key information and correlations within long texts.
-•	Thematic Classification: 
-o	Segments and organizes documents by topic or category.
-•	Multilingual Processing: 
-o	Handles documents in different languages, improving global accessibility.
-•	Integrated OCR Support: 
-o	Compatible with OCR processing pipelines to convert physical documents into searchable digital data.
+* Advanced Summarization: Produces high-quality summaries of articles, reports, and complex documents.
+* Contextual Analysis: Identifies key information and correlations within long texts.
+* Thematic Classification: Segments and organizes documents by topic or category.
+* Multilingual Processing: Handles documents in different languages, improving global accessibility.
+* Integrated OCR Support: Compatible with OCR processing pipelines to convert physical documents into searchable digital data.
+
 These capabilities make it suitable for knowledge management and business automation.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 RedPajama is distributed under an open-source license that emphasizes transparency and flexibility:
-•	Permitted Uses: 
-o	Academic, research, and commercial applications without significant restrictions.
-•	Restrictions: 
-o	Use for unethical, discriminatory, or harmful purposes is prohibited.
-o	Sharing contributions that improve the model with the community is encouraged.
+* Permitted Uses:
+   * Academic, research, and commercial applications without significant restrictions.
+* Restrictions: 
+   * Use for unethical, discriminatory, or harmful purposes is prohibited.
+   * Sharing contributions that improve the model with the community is encouraged.
 
 The license promotes adoption in both academic and industrial environments.
 
-## Claude
-(see [Ref. 10])
+
+## Claude[^10]
 Claude is a language model developed by Anthropic, a startup specializing in artificial intelligence, founded by former OpenAI researchers. The primary goal of Claude is to provide a safe, controllable, and high-performance alternative for natural language processing tasks. Claude is designed to be "built with values," with a particular focus on reducing undesirable behaviors and ensuring operational safety.
 The model is named after Claude Shannon, the father of information theory. Claude is optimized for business and research applications, offering advanced capabilities for language and data management without compromising privacy and security.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 Claude is available in different variants, designed for different levels of complexity:
-•	Claude-Small: A lightweight model for basic applications, with 1 to 6 billion parameters (not officially specified).
-•	Claude-Medium: Designed for more complex tasks, estimated to have between 10 and 20 billion parameters.
-•	Claude-Large: The flagship configuration, with a parameter count similar to models like GPT-3, over 100 billion parameters.
+* Claude-Small: A lightweight model for basic applications, with 1 to 6 billion parameters (not officially specified).
+* Claude-Medium: Designed for more complex tasks, estimated to have between 10 and 20 billion parameters.
+* Claude-Large: The flagship configuration, with a parameter count similar to models like GPT-3, over 100 billion parameters.
+
 Actual sizes may vary, as Anthropic has not disclosed all technical details.
-Hardware Requirements
+
+#### Hardware Requirements
 Hardware requirements for Claude depend on the model size and specific implementation:
-•	Claude-Small: 
-o	Requires 8-12 GB of VRAM, executable on consumer GPUs like the NVIDIA RTX 3060.
-o	For CPU, at least 16 GB of RAM is needed.
-•	Claude-Medium: 
-o	Requires 24-32 GB of VRAM, ideal for high-end GPUs like the RTX 3090 or 4090.
-o	For CPU, at least 64 GB of RAM is required for complex tasks.
-•	Claude-Large: 
-o	Requires advanced infrastructure, such as A100 or V100 GPUs with 80+ GB of VRAM, or multi-GPU distributed configurations.
-o	For CPU, over 256 GB of RAM may be needed.
+* Claude-Small:
+   * Requires 8-12 GB of VRAM, executable on consumer GPUs like the NVIDIA RTX 3060.
+   * For CPU, at least 16 GB of RAM is needed.
+* Claude-Medium: 
+   * Requires 24-32 GB of VRAM, ideal for high-end GPUs like the RTX 3090 or 4090.
+   * For CPU, at least 64 GB of RAM is required for complex tasks.
+* Claude-Large: 
+   * Requires advanced infrastructure, such as A100 or V100 GPUs with 80+ GB of VRAM, or multi-GPU distributed configurations.
+   * For CPU, over 256 GB of RAM may be needed.
+
 Smaller versions of Claude are suitable for local use, while larger ones require specialized infrastructure.
-Supported Frameworks
+
+#### Supported Frameworks
 Claude supports various industry-standard frameworks:
-•	PyTorch: Used for training and inference.
-•	Hugging Face Transformers: Offers limited integration for some of Claude’s models.
-•	DeepSpeed: Enhances performance on multiple GPUs for training and fine-tuning.
-•	Anthropic SDK: Provides native tools for model access and configuration.
+* PyTorch: Used for training and inference.
+* Hugging Face Transformers: Offers limited integration for some of Claude’s models.
+* DeepSpeed: Enhances performance on multiple GPUs for training and fine-tuning.
+* Anthropic SDK: Provides native tools for model access and configuration.
+
 Anthropic also offers detailed documentation to ensure simple and fast integration.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 Claude is designed to be highly customizable:
-•	Full Training: 
-o	Based on high-quality datasets designed to avoid bias and undesirable behaviors.
-o	Training requires significant computational resources, typically available only in cloud environments or advanced clusters.
-•	Fine-Tuning: 
-o	Supports lightweight techniques such as prompt tuning and adapter layers for model customization.
-o	Optimized for specific tasks such as enterprise chatbots, sentiment analysis, and personalized content generation.
+* Full Training: 
+   * Based on high-quality datasets designed to avoid bias and undesirable behaviors.
+   * Training requires significant computational resources, typically available only in cloud environments or advanced clusters.
+* Fine-Tuning: 
+   * Supports lightweight techniques such as prompt tuning and adapter layers for model customization.
+   * Optimized for specific tasks such as enterprise chatbots, sentiment analysis, and personalized content generation.
+
 The training process is designed to balance performance and safety.
-Querying Modes (API, CLI, etc.)
+
+#### Querying Modes (API, CLI, etc.)
 Claude is flexible in its access modes:
-•	Local and Cloud-based APIs: 
-o	Allows for quick integration with existing applications.
-•	CLI: 
-o	Ideal for testing and batch operations on datasets.
-•	Customizable Interfaces: 
-o	Compatible with platforms like Gradio for direct interaction.
-•	Anthropic Console: 
-o	A native UI provided by Anthropic for model management.
+* Local and Cloud-based APIs: Allows for quick integration with existing applications.
+* CLI: Ideal for testing and batch operations on datasets.
+* Customizable Interfaces: Compatible with platforms like Gradio for direct interaction.
+* Anthropic Console: A native UI provided by Anthropic for model management.
+
 Claude is designed to work both in real-time and asynchronous modes.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 Claude offers advanced capabilities for document management:
-•	Structured Summaries: 
-o	Generates high-quality summaries of complex documents, business reports, and articles.
-•	Contextual Analysis: 
-o	Extracts key information from large amounts of text data.
-•	Thematic Classification: 
-o	Segments documents into specific categories based on predefined criteria.
-•	Multilingual Support: 
-o	Handles documents in many languages, making it versatile for global contexts.
-•	OCR Integration: 
-o	Compatible with OCR processing pipelines to digitize and analyze scanned documents.
+* Structured Summaries: Generates high-quality summaries of complex documents, business reports, and articles.
+* Contextual Analysis: Extracts key information from large amounts of text data.
+* Thematic Classification: Segments documents into specific categories based on predefined criteria.
+* Multilingual Support: Handles documents in many languages, making it versatile for global contexts.
+* OCR Integration: Compatible with OCR processing pipelines to digitize and analyze scanned documents.
+
 These capabilities make Claude an excellent choice for knowledge management and document automation.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 Claude is distributed with licenses designed to balance flexibility and safety:
-•	Permitted Uses: 
-o	Academic research, business applications, and non-profit use.
-•	Restrictions: 
-o	Use for harmful, discriminatory, or unethical purposes is prohibited.
-o	Commercial use is regulated by specific license clauses and may require a contract with Anthropic.
+*	Permitted Uses:
+   * Academic research, business applications, and non-profit use.
+* Restrictions: 
+   * Use for harmful, discriminatory, or unethical purposes is prohibited.
+   * Commercial use is regulated by specific license clauses and may require a contract with Anthropic.
 
 The license ensures the safety of the model and limits its misuse.
 
-## Gemma
-(see [Ref. 11])
+## Gemma[^11]
 Gemma is an advanced natural language model developed by an open-source community with support from various academic and industrial institutions. The project was conceived to provide a highly optimized and customizable alternative for NLP applications operating on private infrastructures.
 With a particular focus on computational efficiency and flexibility, Gemma is designed to operate in local contexts, reducing cloud dependency and ensuring greater control over data. The model is especially appreciated for its ability to handle large volumes of both structured and unstructured data, making it ideal for document management and business analytics.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 Gemma is available in three main configurations to meet different needs:
-•	Gemma-Lite: Around 2 billion parameters, ideal for simple tasks and environments with limited resources.
-•	Gemma-Standard: Around 10 billion parameters, designed for generic and complex NLP tasks.
-•	Gemma-Pro: Over 20 billion parameters, optimized for advanced applications such as predictive analytics and complex content generation.
+* Gemma-Lite: Around 2 billion parameters, ideal for simple tasks and environments with limited resources.
+* Gemma-Standard: Around 10 billion parameters, designed for generic and complex NLP tasks.
+* Gemma-Pro: Over 20 billion parameters, optimized for advanced applications such as predictive analytics and complex content generation.
+
 The variety allows for customization based on specific requirements.
-Hardware Requirements
+
+#### Hardware Requirements
 Gemma’s hardware requirements vary depending on the model size:
 •	Gemma-Lite: 
 o	8-16 GB of VRAM for inference on GPU.
