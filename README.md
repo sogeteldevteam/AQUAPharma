@@ -22,37 +22,37 @@ Hereafter, the project will be referred to simply as "the project."
 
 ## Models Under Review
 Below are the models we have taken into consideration.
-1.	**LLaMA (Large Language Model Meta AI)**[^1]
+1.	[**LLaMA (Large Language Model Meta AI)**](#llama-large-language-model-meta-ai1)[^1]
   * Created by Meta (Facebook AI).
   * Designed for academic and research use, with variants ranging from millions to billions of parameters.
-2.	**GPT-J**[^2]
+2.	[**GPT-J**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#model-size-number-of-parameters-1)[^2]
   * Developed by EleutherAI.
   * Open source and focused on competitive performance compared to GPT-3.
-3.	**GPT-NeoX**[^3]
+3.	[**GPT-NeoX**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#gpt-neox3)[^3]
   * Another initiative by EleutherAI.
   * Customizable and scalable model with tens of billions of parameters.
-4.	**Falcon**[^4]
+4.	[**Falcon**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#falcon4)[^4]
   * Created by the Institute for Research in Digital Science and Technology (TII).
   * Open-source model that has gained popularity for high performance on local hardware.
-5.	**Bloom**[^5]
+5.	[**Bloom**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#bloom5)[^5]
   * Created by BigScience.
   * Multilingual and open source, designed to adapt to various scenarios, including private environments.
-6.	**Mistral**[^6]
+6.	[**Mistral**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#mistral6)[^6]
   * Specialized for efficiency and optimization on local machines.
   * Focuses on lightweight yet powerful models.
-7.	**Alpaca**[^7]
+7.	[**Alpaca**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#alpaca7)[^7]
   * Based on LLaMA, trained by Stanford for conversational purposes.
   * Ideal for targeted tasks on private infrastructures.
-8.	**OPT (Open Pretrained Transformer)**[^8]
+8.	[**OPT (Open Pretrained Transformer)**](#)[^8]
   * Developed by Meta.
   * Created to reduce dependency on closed models like GPT-3.
-9.	**RedPajama**[^9]
+9.	[**RedPajama**](#)[^9]
   * Open source, designed to replicate datasets used by high-level models such as GPT-3.
   * Focused on accessibility and customization.
-10.	**Claude**[^10]
+10.	[**Claude**](#)[^10]
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
-11.	**Gemma**[^11]
+11.	[**Gemma**](#)[^11]
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
 
@@ -502,7 +502,7 @@ o	Distributing derivative versions may require publishing the code and modificat
 
 This license restricts direct commercial use without approval but allows flexibility for academic and non-profit applications.
 
-OPT
+## OPT
 (see [Ref. 08])
 OPT (Open Pretrained Transformer) is a family of language models developed by Meta AI in 2022 as an open-source alternative to proprietary large models like GPT-3. The project stands out for the transparency of the code, training datasets, and processes used to build the model, making it a popular choice for the research community.
 OPT is designed to support a wide range of NLP tasks, such as text generation, autocomplete, and document summarization. It is known for being relatively efficient compared to other models of comparable size, making it suitable for use on private and local hardware.
@@ -573,7 +573,7 @@ o	Meta enforces a strict code of conduct to prevent unethical uses of the model.
 
 This license encourages open research while limiting commercial applications.
 
-RedPajama
+## RedPajama
 (see [Ref. 09])
 RedPajama is a family of language models developed as an open-source initiative by the AI research community, AI Together. It was created to replicate, improve, and democratize large language models through a transparent and collaborative approach.
 RedPajama stands out for its fully open training dataset, which is based on a large-scale collection of high-quality data, enabling a wide range of applications in natural language processing (NLP) tasks. The project supports training and usage on local hardware, making it ideal for businesses and researchers who want to avoid dependence on cloud infrastructure.
@@ -640,7 +640,7 @@ o	Sharing contributions that improve the model with the community is encouraged.
 
 The license promotes adoption in both academic and industrial environments.
 
-Claude
+## Claude
 (see [Ref. 10])
 Claude is a language model developed by Anthropic, a startup specializing in artificial intelligence, founded by former OpenAI researchers. The primary goal of Claude is to provide a safe, controllable, and high-performance alternative for natural language processing tasks. Claude is designed to be "built with values," with a particular focus on reducing undesirable behaviors and ensuring operational safety.
 The model is named after Claude Shannon, the father of information theory. Claude is optimized for business and research applications, offering advanced capabilities for language and data management without compromising privacy and security.
@@ -713,7 +713,7 @@ o	Commercial use is regulated by specific license clauses and may require a cont
 
 The license ensures the safety of the model and limits its misuse.
 
-Gemma
+## Gemma
 (see [Ref. 11])
 Gemma is an advanced natural language model developed by an open-source community with support from various academic and industrial institutions. The project was conceived to provide a highly optimized and customizable alternative for NLP applications operating on private infrastructures.
 With a particular focus on computational efficiency and flexibility, Gemma is designed to operate in local contexts, reducing cloud dependency and ensuring greater control over data. The model is especially appreciated for its ability to handle large volumes of both structured and unstructured data, making it ideal for document management and business analytics.
@@ -786,7 +786,7 @@ o	Attribution to the original project is required in public implementations.
 
 The license allows for broad adoption, balancing accessibility and responsibility.
 
-Retrieval-Augmented Generation (RAG): A Hybrid Model for Optimizing the Process
+## Retrieval-Augmented Generation (RAG): A Hybrid Model for Optimizing the Process
 RAG (Retrieval-Augmented Generation) is an innovative approach that combines information retrieval mechanisms with text generation based on large language models (LLMs). This paradigm is designed to overcome the intrinsic limitations of language models, such as the lack of real-time updates and the ability to handle extremely broad or specialized contexts.
 With RAG, the model does not rely exclusively on pre-trained knowledge but integrates documents, databases, or external repositories that are updated in real-time, retrieving relevant information as needed. This approach ensures more accurate, up-to-date, and contextualized responses.
 How RAG Works
