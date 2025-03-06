@@ -25,34 +25,34 @@ Below are the models we have taken into consideration.
 1.	[**LLaMA (Large Language Model Meta AI)**](#llama-large-language-model-meta-ai1)[^1]
   * Created by Meta (Facebook AI).
   * Designed for academic and research use, with variants ranging from millions to billions of parameters.
-2.	[**GPT-J**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#model-size-number-of-parameters-1)[^2]
+2.	[**GPT-J**](#model-size-number-of-parameters-1)[^2]
   * Developed by EleutherAI.
   * Open source and focused on competitive performance compared to GPT-3.
-3.	[**GPT-NeoX**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#gpt-neox3)[^3]
+3.	[**GPT-NeoX**](#gpt-neox3)[^3]
   * Another initiative by EleutherAI.
   * Customizable and scalable model with tens of billions of parameters.
-4.	[**Falcon**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#falcon4)[^4]
+4.	[**Falcon**](#falcon4)[^4]
   * Created by the Institute for Research in Digital Science and Technology (TII).
   * Open-source model that has gained popularity for high performance on local hardware.
-5.	[**Bloom**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#bloom5)[^5]
+5.	[**Bloom**](#bloom5)[^5]
   * Created by BigScience.
   * Multilingual and open source, designed to adapt to various scenarios, including private environments.
-6.	[**Mistral**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#mistral6)[^6]
+6.	[**Mistral**](#mistral6)[^6]
   * Specialized for efficiency and optimization on local machines.
   * Focuses on lightweight yet powerful models.
-7.	[**Alpaca**](#https://github.com/sogeteldevteam/AQUAPharma/blob/main/README.md#alpaca7)[^7]
+7.	[**Alpaca**](#alpaca7)[^7]
   * Based on LLaMA, trained by Stanford for conversational purposes.
   * Ideal for targeted tasks on private infrastructures.
-8.	[**OPT (Open Pretrained Transformer)**](#)[^8]
+8.	[**OPT (Open Pretrained Transformer)**](#opt)[^8]
   * Developed by Meta.
   * Created to reduce dependency on closed models like GPT-3.
-9.	[**RedPajama**](#)[^9]
+9.	[**RedPajama**](#redpajama)[^9]
   * Open source, designed to replicate datasets used by high-level models such as GPT-3.
   * Focused on accessibility and customization.
-10.	[**Claude**](#)[^10]
+10.	[**Claude**](#claude)[^10]
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
-11.	[**Gemma**](#)[^11]
+11.	[**Gemma**](#gemma)[^11]
   * Created by Anthropic.
   * Although cloud-oriented, it can be adapted for private environments with specific licenses.
 
@@ -440,70 +440,71 @@ This license makes Mistral an attractive option for organizations in need of sca
 ## Alpaca[^7]
 Alpaca is a language model developed by Stanford University as a fork of Meta AI's popular LLaMA model. Created in 2023, Alpaca is designed to provide a lightweight and specialized machine learning platform, suitable for conversational tasks and specific domains. One of its main features is optimization for rapid and low-cost fine-tuning, using innovative techniques that make it highly accessible even for those with limited resources.
 Alpaca was trained using curated datasets and semi-supervised generation methods, creating a model capable of understanding and generating contextually relevant responses. This makes it ideal for business, educational, and research applications, where a high-performing model is required without relying on cloud infrastructure.
-Technical Details
-Model Size (Number of Parameters)
+
+### Technical Details
+
+#### Model Size (Number of Parameters)
 Alpaca inherits dimensional configurations from LLaMA and offers optimized variants:
-•	Alpaca-7B: With 7 billion parameters, this is the most commonly used version for conversational tasks and customized applications.
-•	Alpaca-13B: A larger and more powerful variant with 13 billion parameters, designed for complex tasks and advanced applications.
+*	Alpaca-7B: With 7 billion parameters, this is the most commonly used version for conversational tasks and customized applications.
+*	Alpaca-13B: A larger and more powerful variant with 13 billion parameters, designed for complex tasks and advanced applications.
 This modularity allows you to choose the most suitable configuration based on operational needs.
-Hardware Requirements
+
+#### Hardware Requirements
 Alpaca’s hardware requirements depend on the selected configuration:
-•	Alpaca-7B: 
-o	Requires 16 GB of VRAM for inference, compatible with high-end GPUs like the NVIDIA RTX 3090.
-o	On CPU, at least 32 GB of RAM is needed for smooth execution.
-•	Alpaca-13B: 
-o	Requires 24 GB of VRAM, making it ideal for systems with GPUs like the NVIDIA RTX 4090 or A100.
-o	On local setups, fine-tuning may require the use of clusters or multi-GPU systems.
+* Alpaca-7B:
+   * Requires 16 GB of VRAM for inference, compatible with high-end GPUs like the NVIDIA RTX 3090.
+   * On CPU, at least 32 GB of RAM is needed for smooth execution.
+* Alpaca-13B:
+   * Requires 24 GB of VRAM, making it ideal for systems with GPUs like the NVIDIA RTX 4090 or A100.
+   * On local setups, fine-tuning may require the use of clusters or multi-GPU systems.
+
 Alpaca is optimized for local inference, making it a preferred choice for those avoiding cloud services.
-Supported Frameworks
+
+#### Supported Frameworks
 Alpaca is fully compatible with various machine learning frameworks:
-•	Hugging Face Transformers: Easily integrates Alpaca into existing NLP pipelines.
-•	PyTorch: Used for model development and fine-tuning.
-•	ONNX Runtime: Enables optimized inference on heterogeneous hardware, improving performance on edge devices.
-•	DeepSpeed: Supports distributed configurations for large-scale training.
+* Hugging Face Transformers: Easily integrates Alpaca into existing NLP pipelines.
+* PyTorch: Used for model development and fine-tuning.
+* ONNX Runtime: Enables optimized inference on heterogeneous hardware, improving performance on edge devices.
+* DeepSpeed: Supports distributed configurations for large-scale training.
+
 This compatibility makes Alpaca accessible and easy to integrate into different environments.
-Training and Fine-Tuning Modes
+
+#### Training and Fine-Tuning Modes
 Alpaca supports flexible training and fine-tuning modes:
-•	Full Training: 
-o	Based on generated and curated datasets, requires advanced infrastructure to operate at full potential.
-•	Fine-Tuning: 
-o	Supports techniques like Low-Rank Adaptation (LoRA) and Instruction Tuning, which significantly reduce computational costs.
-o	Ideal for adapting the model to vertical tasks, such as classification or information extraction.
-o	Users can employ prompt tuning to achieve customized results without altering the main model weights.
-Querying Modes (API, CLI, etc.)
+* Full Training: Based on generated and curated datasets, requires advanced infrastructure to operate at full potential.
+* Fine-Tuning: 
+   * Supports techniques like Low-Rank Adaptation (LoRA) and Instruction Tuning, which significantly reduce computational costs.
+   * Ideal for adapting the model to vertical tasks, such as classification or information extraction.
+   * Users can employ prompt tuning to achieve customized results without altering the main model weights.
+
+#### Querying Modes (API, CLI, etc.)
 Alpaca’s querying modes include:
-•	Local APIs: 
-o	Allows users to set up secure and private REST endpoints for inference.
-•	CLI: 
-o	Ideal for rapid testing and batch tasks.
-•	Interactive UIs: 
-o	Compatible with platforms like Gradio to create user-friendly interfaces for direct interaction with users.
+* Local APIs: Allows users to set up secure and private REST endpoints for inference.
+* CLI: Ideal for rapid testing and batch tasks.
+* Interactive UIs: Compatible with platforms like Gradio to create user-friendly interfaces for direct interaction with users.
+
 Alpaca is optimized for both asynchronous and real-time pipelines, ensuring a fast response.
-Document Management, Organization, and Reading Capabilities
+
+#### Document Management, Organization, and Reading Capabilities
 Alpaca is particularly suited for managing and processing documents:
-•	Accurate Summaries: 
-o	Generates well-structured summaries of complex documents like scientific papers or business reports.
-•	Information Extraction: 
-o	Can identify key entities, numbers, and relevant concepts from unstructured text.
-•	Automatic Categorization: 
-o	Classifies documents based on predefined themes, topics, or categories.
-•	Multilingual Support: 
-o	Although not as extensive as other models, Alpaca handles text in several languages effectively.
-•	OCR Compatibility: 
-o	Enables the processing of scanned documents, converting them into structured and searchable content.
+* Accurate Summaries: Generates well-structured summaries of complex documents like scientific papers or business reports.
+* Information Extraction: Can identify key entities, numbers, and relevant concepts from unstructured text.
+* Automatic Categorization: Classifies documents based on predefined themes, topics, or categories.
+* Multilingual Support: Although not as extensive as other models, Alpaca handles text in several languages effectively.
+* OCR Compatibility: Enables the processing of scanned documents, converting them into structured and searchable content.
+
 Alpaca is ideal for applications involving archiving, document search, and knowledge bases.
-License and Usage Restrictions
+
+#### License and Usage Restrictions
 Alpaca inherits the GPL-like license from the LLaMA model, with some modifications introduced by Stanford researchers:
-•	Freedom of Use: 
-o	Alpaca can be used for academic and research purposes. However, commercial use requires specific approvals.
+* Freedom of Use: Alpaca can be used for academic and research purposes. However, commercial use requires specific approvals.
 •	Restrictions: 
-o	It is prohibited to use the model for harmful, discriminatory, or unethical purposes.
-o	Distributing derivative versions may require publishing the code and modifications.
+   * It is prohibited to use the model for harmful, discriminatory, or unethical purposes.
+   * Distributing derivative versions may require publishing the code and modifications.
 
 This license restricts direct commercial use without approval but allows flexibility for academic and non-profit applications.
 
-## OPT
-(see [Ref. 08])
+## OPT[^8]
 OPT (Open Pretrained Transformer) is a family of language models developed by Meta AI in 2022 as an open-source alternative to proprietary large models like GPT-3. The project stands out for the transparency of the code, training datasets, and processes used to build the model, making it a popular choice for the research community.
 OPT is designed to support a wide range of NLP tasks, such as text generation, autocomplete, and document summarization. It is known for being relatively efficient compared to other models of comparable size, making it suitable for use on private and local hardware.
 Technical Details
