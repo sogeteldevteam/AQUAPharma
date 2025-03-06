@@ -343,12 +343,9 @@ BLOOM is designed to support both full training and fine-tuning:
 
 #### Querying Modes (API, CLI, etc.)
 Querying modes for BLOOM include:
-*	Local APIs: 
-  *	Thanks to integration with Hugging Face, it's easy to set up a REST endpoint for custom queries.
-*	CLI: 
-  *	Allows for text generation and analysis directly from the command line, ideal for quick testing.
-*	Interactive UIs: 
-  *	BLOOM can be integrated with platforms like Gradio to create graphical interfaces for direct interaction with users.
+* Local APIs: Thanks to integration with Hugging Face, it's easy to set up a REST endpoint for custom queries.
+* CLI: Allows for text generation and analysis directly from the command line, ideal for quick testing.
+*	Interactive UIs: BLOOM can be integrated with platforms like Gradio to create graphical interfaces for direct interaction with users.
 
 Inference pipelines can be run in batch or real-time modes, adapting to different operational needs.
 
@@ -365,10 +362,11 @@ With OCR integration, BLOOM can process non-textual documents and convert them i
 BLOOM is released under the RAIL (Responsible AI License), which imposes some restrictions on the use of the model:
 *	Permission to Use: BLOOM can be used for commercial, academic, and personal purposes, as long as it does not violate the restrictions set by the license.
 *	Restrictions: 
-  * The model cannot be used for activities that promote harm, discrimination, or privacy violations.
-  *	The use of the model must comply with local and international laws.
+   * The model cannot be used for activities that promote harm, discrimination, or privacy violations.
+   * The use of the model must comply with local and international laws.
 
 The RAIL license encourages ethical and responsible use of the model, requiring users to ensure that applications do not have negative impacts.
+
 
 ## Mistral[^6]
 Mistral is a next-generation language model developed by Mistral AI, a European startup known for its focus on creating open-weight models optimized for local execution. Mistral was launched in 2023 as an efficient and scalable alternative to large language models, with a strong emphasis on hardware optimization and transparency.
