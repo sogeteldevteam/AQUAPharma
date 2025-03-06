@@ -383,12 +383,12 @@ This flexibility allows users to choose the most suitable model based on applica
 
 #### Hardware Requirements
 Mistral’s hardware requirements are optimized for maximum efficiency:
-*	Mistral-7B: 
-  *	16 GB of VRAM for inference, compatible with high-end consumer GPUs like NVIDIA RTX 3090 or 4090.
-  *	For fine-tuning, it is recommended to use 32 GB of VRAM or a multi-GPU setup.
-* Mistral-3B: 
-  *	Can run with 8 GB of VRAM, making it compatible with mid-range GPUs like NVIDIA GTX 1660.
-  *	On CPUs, at least 16 GB of RAM is required, ideal for lighter applications.
+* Mistral-7B: 
+   * 16 GB of VRAM for inference, compatible with high-end consumer GPUs like NVIDIA RTX 3090 or 4090.
+   * For fine-tuning, it is recommended to use 32 GB of VRAM or a multi-GPU setup.
+* Mistral-3B:
+   * Can run with 8 GB of VRAM, making it compatible with mid-range GPUs like NVIDIA GTX 1660.
+   * On CPUs, at least 16 GB of RAM is required, ideal for lighter applications.
 
 These reduced hardware requirements make Mistral particularly suitable for organizations with limited resources.
 
@@ -403,13 +403,13 @@ Pre-trained models available on various platforms speed up deployment in busines
 
 #### Training and Fine-Tuning Modes
 Mistral is designed to support flexible training and fine-tuning approaches:
-*	Full Training: 
-  *	Requires advanced GPU clusters and large-scale datasets.
-  *	Includes optimizations to handle specific tasks, such as processing low-resource languages.
-*	Fine-Tuning: 
-  *	Supports techniques such as Low-Rank Adaptation (LoRA), which reduce computational costs.
-  *	Prompt tuning can be used to adapt the model to specific tasks without modifying the main weights.
-*	Fine-tuning is particularly effective for customizing Mistral in vertical domains like medicine, law, or finance.
+* Full Training:
+   * Requires advanced GPU clusters and large-scale datasets.
+   * Includes optimizations to handle specific tasks, such as processing low-resource languages.
+* Fine-Tuning:
+   * Supports techniques such as Low-Rank Adaptation (LoRA), which reduce computational costs.
+   * Prompt tuning can be used to adapt the model to specific tasks without modifying the main weights.
+* Fine-tuning is particularly effective for customizing Mistral in vertical domains like medicine, law, or finance.
 
 #### Querying Modes (API, CLI, etc.)
 Mistral’s querying modes include:
