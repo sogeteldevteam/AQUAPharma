@@ -360,8 +360,8 @@ With OCR integration, BLOOM can process non-textual documents and convert them i
 
 #### License and Usage Restrictions
 BLOOM is released under the RAIL (Responsible AI License), which imposes some restrictions on the use of the model:
-*	Permission to Use: BLOOM can be used for commercial, academic, and personal purposes, as long as it does not violate the restrictions set by the license.
-*	Restrictions: 
+* Permission to Use: BLOOM can be used for commercial, academic, and personal purposes, as long as it does not violate the restrictions set by the license.
+* Restrictions: 
    * The model cannot be used for activities that promote harm, discrimination, or privacy violations.
    * The use of the model must comply with local and international laws.
 
