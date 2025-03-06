@@ -192,13 +192,13 @@ The flexibility in size allows users to choose the model that fits their computa
 
 #### Hardware Requirements
 The required hardware specifications depend on the model size:
-*	6B Parameters: 
+* 6B Parameters: 
    * About 20 GB of VRAM for inference, suitable for GPUs like the NVIDIA RTX 3090 or equivalents.
    * For training, multi-GPU configurations or TPU usage are recommended.
-*	20B Parameters and Beyond:
+* 20B Parameters and Beyond:
    * Requires 64-80 GB of VRAM, suitable for advanced systems like the NVIDIA A100 or HPC clusters.
    * Distributed configurations with DeepSpeed or Megatron-LM are highly recommended.
-*	CPU: 
+* CPU: 
    * Inferences can be run, but requires 128+ GB of RAM to load large models. Not recommended for real-time tasks.
 
 #### Supported Frameworks
